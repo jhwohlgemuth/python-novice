@@ -66,8 +66,7 @@ contact: 'wohlgemuthjh@ornl.gov'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
-- introduction.Rmd
+episodes:
 
 # Information for Learners
 learners: 
