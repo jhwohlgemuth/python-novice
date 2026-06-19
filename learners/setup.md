@@ -2,7 +2,7 @@
 title: Setup
 ---
 
-[Python](https://www.python.org/) is an interpreted, object-oriented, high-level programming language. As opposed to a compiled language like Fortran and C, an interpreted language is a programming language which executes code without the need to previously compile a program into "machine-language". Since there is no compilation step, the testing and debugging cycle is quite fast.
+[Python](https://www.python.org/) is an "interpreted"[^def], object-oriented, imperative, high-level, multi-paradigm programming language. As opposed to a compiled language like Fortran or C, an "interpreted" language like Python is a programming language which executes code without the need to first compile a program into "machine-language". Since there is no compilation step, the testing and debugging cycle is quite fast.
 
 Python has become one of the most popular programming languages in the world in recent years. Python's simple, easy to learn syntax emphasizes readability, so it is one of the "easier" languages to learn when beginning to program. It can be used for machine learning, website development, data science, task automation, and much more. In high-performance computing, Python is heavily used to analyze scientific data on the system.
 
@@ -10,7 +10,7 @@ This lesson is meant to give you experience with some of the basic foundation of
 
 ::::::::::::::::::::::::::::::::::::: prereq
 
-You need to understand how to use command line tools (e.g., vim or neovim), have an editor (ex. VS Code) installed on your system, and have Python installed on your computer. If you do not have Python installed, please follow the instructions in the [Software Setup](#software-setup) section below.
+You need to understand how to use the command line, have an editor (e.g., neovim, VS Code, etc.) installed on your system, and have Python installed on your computer. If you do not have Python installed, please follow the instructions in the [Software Setup](#software-setup) section below.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -117,3 +117,4 @@ Notes:
 
 ::::::::::::::::::::::::
 
+[^def]: An "interpreted" language means that the code is executed directly by an interpreter, without a separate compilation step. This allows for faster development and testing cycles, as you can run code immediately without waiting for a compilation process. As such, interpreted languages are often favored for scripting, rapid prototyping, and interactive use. Calling Python an "interpreted" language is a simplification, as it actually compiles code to bytecode before execution, but the key point is that this process is transparent to the user and does not require a separate compilation step.

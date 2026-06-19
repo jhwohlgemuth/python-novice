@@ -1,20 +1,26 @@
 ---
 title: "Executing Python Code"
-teaching: 10
+teaching: 18
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you execute Python code?
 - What is the difference between executing code in an interactive environment vs. a script?
+- What is the Python REPL and how do you start it?
+- How do you execute Python code in the REPL?
+- How do you write and run Python scripts from the command line?
+- How do you comment out code in Python?
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
+- Understand the differences between Python REPL and Python scripts
 - Execute Python code in an interactive environment (e.g., Python REPL)
 - Create and run Python scripts from the command line
+- Comment out code in Python
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -67,8 +73,8 @@ Now that you can start a REPL session, how do you exit it?
 ## Solution
 
 After entering the REPL, execute the following command to exit:
-```python
-quit()
+```bash
+>>> quit()
 ```
 #### Alternative Solution
 You can also use `exit()` or press `Ctrl + D` on Unix/Linux/Mac or `Ctrl + Z` followed by `Enter` on Windows to exit the REPL.
@@ -83,7 +89,7 @@ First, let's test things out by making Python say "Hello!" to us using the `prin
 
 ```bash
 >>> print("Hello!")
-Hello!
+'Hello!'
 >>>
 ```
 
@@ -96,7 +102,7 @@ Let's use the `print` function again to print out multiple things at once that a
 
 ```bash
 >>> print("I am on the left!", "I am on the right!")
-I am on the left! I am on the right!
+'I am on the left! I am on the right!'
 >>>
 ```
 
@@ -108,8 +114,7 @@ Let's do this by modifying our above print statement example,
 ```bash
 >>> print("I am on the left!", \
 ... "I am on the right!")
-
-I am on the left! I am on the right!
+'I am on the left! I am on the right!'
 >>>
 ```
 
@@ -134,7 +139,7 @@ The `;` symbol is a shortcut for executing multiple statements on a single line,
 This can be useful for consecutive lines that are short and succinct, or for consecutive lines that may be related to each other. 
 To the Python interpreter, the above example would just look like
 
-```bash
+```pycon
 >>> print("I have the high ground")
 >>> print("You underestimate my power!")
 ```
@@ -253,7 +258,7 @@ For example, consider the following code,
 ```bash
 >>> # this is a comment
 >>> print("Comments are hidden") # this is also a comment
-Comments are hidden
+'Comments are hidden'
 >>> print(" # this is not a comment because enclosed in quotes")
  # this is not a comment because enclosed in quotes
 ```
@@ -269,3 +274,13 @@ Technically, you are able to do `'''` (and `"""`) in the [REPL](#entering-the-py
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Python code can be executed in an interactive environment (e.g., Python REPL).
+- Python code can be executed by writing and running Python scripts (ex., `python script.py`).
+- The Python REPL allows you to type Python code and see the results immediately.
+- Python scripts are files containing Python code that can be executed as a program.
+- Comments in Python start with the `#` symbol.
+- You can use `'''` or `"""` to comment out multiple lines of code.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
