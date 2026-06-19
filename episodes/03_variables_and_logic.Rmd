@@ -27,15 +27,10 @@ if condition:
 ```
 
 ```mermaid
----
-title: if control flow
-accTitle: if control flow
-accDescr: if control flow
----
-
 flowchart LR
+    accTitle: {if control flow}
     A{"Condition"}
-    B["Code"]
+    B("Code")
     C([Continue])
     A -- True --> B
     A -- False --> C
@@ -50,15 +45,11 @@ else:
 ```
 
 ```mermaid
----
-title: if-else control flow
-accTitle: if-else control flow
----
-
 flowchart LR
+    accTitle: {if-else control flow}
     A{"Condition"}
-    B["Code"]
-    C["Code"]
+    B("Code")
+    C("Code")
     D([Continue])
     A -- True --> B
     A -- False --> C
@@ -79,17 +70,13 @@ else:
 ```
 
 ```mermaid
----
-title: if-elif-else control flow
-accTitle: if-elif-else control flow
----
-
 flowchart LR
+    accTitle: {if-elif-else control flow}
     X{"Condition"}
     Y{"Another<br/>Condition"}
-    B1["A"]
-    D1["B"]
-    E1["C"]
+    B1("A")
+    D1("B")
+    E1("C")
     F([Continue])
     X -- True --> B1
     X -- False --> Y
