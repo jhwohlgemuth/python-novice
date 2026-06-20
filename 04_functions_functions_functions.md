@@ -1,0 +1,28 @@
+---
+title: "Functions, Functions, Functions"
+teaching: 20
+exercises: 10
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- Why are functions useful in programming?
+- How are functions defined in Python?
+- What is the difference between a function definition and a function call?
+- How do you pass arguments to a function in Python?
+- Is Python a functional programming language? Why or why not?
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Understand the concept of functions and their importance in programming
+- Learn how to define functions in Python
+- Learn how to pass arguments to functions in Python
+- Distinguish between function definitions, function application, and function arguments
+- Understand the concept of functional programming and its relation to Python
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+> Ah, after that it is functions all the way down!

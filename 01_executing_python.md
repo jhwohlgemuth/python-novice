@@ -1,0 +1,286 @@
+---
+title: "Executing Python Code"
+teaching: 18
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- What is the difference between executing code in an interactive environment vs. a script?
+- What is the Python REPL and how do you start it?
+- How do you execute Python code in the REPL?
+- How do you write and run Python scripts from the command line?
+- How do you comment out code in Python?
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Understand the differences between Python REPL and Python scripts
+- Execute Python code in an interactive environment (e.g., Python REPL)
+- Create and run Python scripts from the command line
+- Comment out code in Python
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Shell vs. Script
+
+When you execute Python code, you can do so in two main ways: through an interactive shell (sometimes called a "REPL") or by writing and running a Python script.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+"REPL" stands for "Read-Eval-Print Loop".
+
+It is an interactive environment where you can type Python code and see the results immediately.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+Remember that a "shell" is an interface that allows you to interact with your operating system, 
+while a "script" is a file containing a sequence of Python commands that can be executed as a program.
+
+In practice, you will often use both methods. 
+The interactive shell is great for testing small snippets of code, debugging, and exploring Python features.
+On the other hand, writing Python scripts is essential for creating larger programs, automating tasks, and sharing your code with others.
+
+## Entering the Python REPL
+
+Before you start writing your own Python scripts, it is recommended to first test things in an interactive REPL session. 
+This will allow you to see output in real-time and let you fix things dynamically if error messages arise.
+
+To start a Python REPL session, open your terminal and type `python` or `python3` (depending on your system configuration). 
+You should see something that looks like this:
+```bash
+>>> python
+Python 3.12.8 (main, Dec  5 2024, 14:06:27) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+The `>>>` symbol is the prompt of the interactive Python interpreter, meaning that the interpreter is ready for Python code to be typed in. 
+Anything you type in, until you exit your interactive shell, will be executed with Python. 
+The code will be executed on a line-by-line basis, and a line will be executed after pressing <kbd>Enter</kbd> / <kbd>Return</kbd>. 
+To end a statement in Python, you do not have to type in a semicolon or other special character, you just need to press <kbd>Enter</kbd> / <kbd>Return</kbd>.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Quiting the REPL
+
+Now that you can start a REPL session, how do you exit it?
+
+::::::::::::::::::::::::::::::::::::: solution
+
+## Solution
+
+After entering the REPL, execute the following command to exit:
+```bash
+>>> quit()
+```
+#### Alternative Solution
+You can also use `exit()` or press `Ctrl + D` on Unix/Linux/Mac or `Ctrl + Z` followed by `Enter` on Windows to exit the REPL.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## REPL Line Syntax
+
+First, let's test things out by making Python say "Hello!" to us using the `print` function
+
+```bash
+>>> print("Hello!")
+'Hello!'
+>>>
+```
+
+In this example, we typed `print("Hello!")` at the prompt and pressed <kbd>Enter</kbd>. 
+The `print` function is a built-in function in Python that outputs the specified message to the console.
+
+Congratulations, you just used Python for the first time in this walkthrough! 
+As it has finished printing out "Hello!", the interactive prompt is now displaying `>>>` again and waiting for you to tell it what to do next. 
+Let's use the `print` function again to print out multiple things at once that are side-by-side
+
+```bash
+>>> print("I am on the left!", "I am on the right!")
+'I am on the left! I am on the right!'
+>>>
+```
+
+Under certain circumstances, your lines may begin with `...` (called "continuation lines"), 
+indicating that the interpreter has not run anything yet and is waiting for you to input something else or "finish" the line. 
+To see this, we can explicitly span a single Python statement across multiple lines by using the `\` symbol at the end of a line. 
+Let's do this by modifying our above print statement example,
+
+```bash
+>>> print("I am on the left!", \
+... "I am on the right!")
+'I am on the left! I am on the right!'
+>>>
+```
+
+Even though we split the single statement across multiple lines, Python still ran the code as if it were all on the same line. 
+Therefore, you can think of the `\` symbol as just extending any given line. 
+Using `\` can be helpful if you are typing a lot of code on a single line and would like to make it more "human-readable" in a text editor for example. 
+The reason why you see `...` is because the interpreter waited for you to tell it what to do next. 
+In this case, it was waiting for you to "finish" the `print` function by submitting the final closing `)`.
+
+Now that you've seen how to split a single Python statement across multiple lines, let's try to combine multiple statements into a single line. 
+We can combine both statements into a single line using the `;` symbol. 
+Consider the following code,
+
+```bash
+>>> print("I have the high ground") ; print("You underestimate my power!") 
+I have the high ground
+You underestimate my power!
+>>>
+```
+
+The `;` symbol is a shortcut for executing multiple statements on a single line, rather than having to code two lines separately. 
+This can be useful for consecutive lines that are short and succinct, or for consecutive lines that may be related to each other. 
+To the Python interpreter, the above example would just look like
+
+```pycon
+>>> print("I have the high ground")
+>>> print("You underestimate my power!")
+```
+
+as two separate lines of code.
+
+## Writing and Running Python Scripts
+
+All of what we covered previously still applies when running Python scripts, but there are a few changes of note. 
+First, since everything in a `.py` file is assumed to be run with Python, there is no need for the `>>>` symbol to be at the beginning of your lines of code. 
+Similarly, you will no longer need `...` at the beginning of your lines to indicate continuation lines. 
+We also gain the ability to comment out multiple lines at once using `'''` or `"""`, which is a nice bonus.
+
+We will be covering Python syntax for writing Python scripts in more detail in the next episode, but for now, you can just write the same code that you would write in the REPL into a `.py` file and run it with Python. 
+For example, if you have a file called `hello.py` with the following content,
+
+```python
+print("I have the high ground")
+print("You underestimate my power!")
+```
+you can run it with Python by executing the following command in your terminal,
+
+```bash
+python hello.py
+```
+
+This will execute the code in `hello.py` and print the following output to the console,
+
+```output
+I have the high ground
+You underestimate my power!
+```
+
+A blank template file called `first_script.py` is included in the data you downloaded for this lesson.
+Use `vim` or your favorite text editor to open the file, `first_script.py`.
+
+Once you have opened this file, it's time to fill it with some code. 
+Entering code into a Python file works just like entering it into the interactive shell, just without the `>>>`. 
+And, just like before, it is executed line-by-line, so to enter a new Python statement or piece of code, just move on to the next line. 
+A blank line in your file will cause no harm, as it just means you are not trying to execute code on that line. 
+For testing purposes, let's fill out `first_script.py` with the following code
+
+```python
+# top of the file
+'''
+Showing off commenting out multiple lines.
+Sometimes comments of this nature are used
+to provide a description of the file at
+the top of the file.
+They can span multiple lines when enclosed
+by a pair of three single quotes.
+'''
+
+print("Hello from your first script!")
+
+# Add some numbers
+x = 8.675
+y = 3.09
+z = x + y
+
+# Print some output
+print("Jenny has ", z, " gallons of water in her pool.")
+```
+
+After you have filled in your file with code (and saved), you can run it by executing the following in your terminal
+
+```bash
+python first_script.py
+```
+
+You should then see the following output displayed in your terminal
+
+```output
+Hello from your first script!
+Jenny has  11.765  gallons of water in her pool.
+```
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Too many spaces
+
+There appears to be too many spaces around the number `11.765` in the output.
+How can you fix this?
+
+::::::::::::::::::::::::::::::::::::: solution
+
+## Solution
+
+There are extra spaces in the output because we used commas to separate the different items in our `print` statement. 
+When you use commas in a `print` statement, Python automatically adds a space between each item.
+```python
+# Print without extra spaces
+print("Jenny has", z, "gallons of water in her pool.")
+```
+### Alternative Solution
+The more "Pythonic" solution is to use an f-string to format the output. 
+There are many reasons why f-strings are generally preferred over using commas in `print` statements including improved control and readability.
+```python
+# Print using an f-string
+print(f"Jenny has {z} gallons of water in her pool.")
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Comments
+
+Some final syntax that we need to cover before moving on is Python "comments". 
+After you have filled in your file with code, you can run it by executing the following in your terminalComments are not interpreted by Python and are used to clarify code — usually they act as notes to yourself or others to explain what a piece of code may be doing (they are otherwise hidden). 
+Comments in Python start with the hash character `#` (also known as "pound" or "hashtag" or "octothorpe"), which affects all the text you type in afterward. 
+A comment may appear at the start of a brand new line or following pieces of code. 
+However, the `#` symbol enclosed by a pair of `"` or `'` is just a hash character and has no effect. 
+For example, consider the following code,
+
+```bash
+>>> # this is a comment
+>>> print("Comments are hidden") # this is also a comment
+'Comments are hidden'
+>>> print(" # this is not a comment because enclosed in quotes")
+ # this is not a comment because enclosed in quotes
+```
+
+Comments are used heavily throughout this lesson and, other than the above example, 
+you do not have to type in the comments yourself while you go through the examples — they are mainly there for you to read.
+
+You can enclose multiple lines in a pair of `'''` (three single quotes) or `"""` (three double quotes) to comment out entire blocks of lines.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Technically, you are able to do `'''` (and `"""`) in the [REPL](#entering-the-python-repl), but it is much more cumbersome, so we did not cover it.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Python code can be executed in an interactive environment (e.g., Python REPL).
+- Python code can be executed by writing and running Python scripts (ex., `python script.py`).
+- The Python REPL allows you to type Python code and see the results immediately.
+- Python scripts are files containing Python code that can be executed as a program.
+- Comments in Python start with the `#` symbol.
+- You can use `'''` or `"""` to comment out multiple lines of code.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
