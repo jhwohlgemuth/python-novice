@@ -1,87 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/01-introduction.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/404.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/01_executing_python.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/CODE_OF_CONDUCT.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/02_types_and_operators.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/LICENSE.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/03_variables_and_logic.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/aio.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/04_functions_functions_functions.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/citation.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/images.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/index.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/01-introduction.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/404.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/citation.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/LICENSE.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/aio.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/citation.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/01_executing_python.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/images.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/02_types_and_operators.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/index.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/03_variables_and_logic.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/instructor-notes.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/04_functions_functions_functions.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/introduction.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/key-points.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/keypoints.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/profiles.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/reference.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/citation.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor-notes.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/introduction.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/key-points.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/keypoints.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/profiles.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/reference.html</loc>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/keypoints.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/keypoints.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://jhwohlgemuth.github.io/python-novice/reference.html</loc>
   </url>
 </urlset>
