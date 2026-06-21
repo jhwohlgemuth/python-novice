@@ -221,7 +221,9 @@
         <ul><li><a href="#types-in-python">Types in Python</a></li>
 <li><a href="#type-conversion">Type Conversion</a></li>
 <li><a href="#operators-in-python">Operators in Python</a></li>
+<li><a href="#variables">Variables</a></li>
 <li><a href="#string-slicing-and-indexing">String Slicing and Indexing</a></li>
+<li><a href="#the-list-frontier">The List Frontier</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -231,7 +233,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03_variables_and_logic.html">3. Variables and Logic</a>
+        <a href="03_loops_and_logic.html">3. Loops and Logic</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -289,7 +291,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="01_executing_python.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="03_variables_and_logic.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="03_loops_and_logic.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -297,14 +299,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Executing Python
         </a>
-        <a class="chapter-link float-end" href="03_variables_and_logic.html" rel="next">
-          Next: Variables and Logic...
+        <a class="chapter-link float-end" href="03_loops_and_logic.html" rel="next">
+          Next: Loops and Logic...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Types and Operators</h1>
-        <p>Last updated on 2026-06-20 |
+        <p>Last updated on 2026-06-21 |
 
         <a href="https://github.com/jhwohlgemuth/python-novice/edit/main/episodes/02_types_and_operators.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -327,6 +329,7 @@
 <li>“How do you check the type of a variable?”</li>
 <li>“What are the basic data types in Python?”</li>
 <li>“How do you convert between different data types?”</li>
+<li>“What are the rules for naming variables in Python?”</li>
 </ul></div>
 </div>
 </div>
@@ -340,6 +343,9 @@ languages</li>
 <li>Learn how to check the type of a variable in Python</li>
 <li>Convert between different data types in Python</li>
 <li>Use string slicing and indexing to manipulate strings in Python</li>
+<li>Use lists to group data in Python</li>
+<li>Understand the rules and conventions for naming variables in
+Python</li>
 </ul></div>
 </div>
 </div>
@@ -666,11 +672,9 @@ division with the <code>//</code> operator.</p>
 called the “assignment operator” and is used to assign a value to a
 variable. The <code>==</code> operator is called the “equality operator”
 and is used to compare two values for equality, returning
-<code>True</code> if they are equal and <code>False</code> otherwise. We
-will cover <code>=</code> and <code>==</code> in more detail in the next
-episode. For now, just be aware that they are different operators with
-different purposes. That being said, here are some examples of how
-<code>=</code> and <code>==</code> are used in Python,</p>
+<code>True</code> if they are equal and <code>False</code> otherwise.
+Here are some examples of how <code>=</code> and <code>==</code> are
+used in Python,</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -680,6 +684,68 @@ different purposes. That being said, here are some examples of how
 <span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a><span class="ex">False</span></span>
 <span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a><span class="op">&gt;&gt;&gt;</span> x <span class="ex">==</span> 5</span>
 <span id="cb13-6"><a href="#cb13-6" tabindex="-1" aria-label="code-block-13-6"></a><span class="ex">True</span></span></code></pre>
+</div>
+<p>The equality operator, <code>==</code>, will be covered in the next
+episode, but it is important to understand that <code>=</code> and
+<code>==</code> are not interchangeable. Using <code>=</code> when you
+meant to use <code>==</code> can lead to unexpected results and/or
+errors.</p>
+</section><section><h2 class="section-heading" id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a></h2>
+<hr class="half-width"><p>Variables are used in every aspect of modern life, from the nickname
+you have for your cat to how we store and analyze data in science and
+engineering. As it is in real life, variable names in Python can be
+almost anything, but there are <em>rules</em> and <em>conventions</em>
+to follow. Rules impose restrictions on how you can name your variables,
+while conventions are more like guidelines that help make your code more
+readable and maintainable (e.g., “Pythonic”).</p>
+<div class="section level3">
+<h3 id="allowed">✅ Allowed<a class="anchor" aria-label="anchor" href="#allowed"></a></h3>
+<ol style="list-style-type: decimal"><li>Variable names must start with a letter (a-z, A-Z) or an underscore
+(<code>_</code>)</li>
+<li>Variable names can only contain letters, numbers, and
+underscores</li>
+</ol><div class="section level4">
+<h4 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a></h4>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a>cake <span class="op">=</span> <span class="st">"chocolate"</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a>_cake <span class="op">=</span> <span class="st">"vanilla"</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a>i_love_cake <span class="op">=</span> <span class="va">True</span></span></code></pre>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="not-allowed">❌ Not Allowed<a class="anchor" aria-label="anchor" href="#not-allowed"></a></h3>
+<ol style="list-style-type: decimal"><li>Variable names cannot be a reserved keyword in Python (e.g.,
+<code>if</code>, <code>else</code>, <code>for</code>,
+<code>while</code>, etc.)</li>
+<li>Variable names cannot start with a number</li>
+<li>Variable names cannot contain spaces (use underscores instead)</li>
+</ol><div class="section level4">
+<h4 id="examples-1">Examples<a class="anchor" aria-label="anchor" href="#examples-1"></a></h4>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a>c<span class="op">@</span>ke <span class="op">=</span> <span class="st">"carrot"</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="dv">0</span><span class="er">cake</span> <span class="op">=</span> <span class="st">"bettercream"</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a>i love cake <span class="op">=</span> <span class="va">False</span></span></code></pre>
+</div>
+
+<div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Python variable names are case-sensitive, meaning that
+<code>cake</code>, <code>Cake</code>, and <code>CAKE</code> are all
+different variables.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="string-slicing-and-indexing">String Slicing and Indexing<a class="anchor" aria-label="anchor" href="#string-slicing-and-indexing"></a></h2>
 <hr class="half-width"><p>One cool thing about strings is that you can “slice” them to extract
@@ -694,31 +760,31 @@ instead of <code>1</code>. The first character in a string has index
 and so forth. To find the full length of a string you can use the
 <code>len()</code> function. To start, you must put these indices in
 square brackets <code>[ ]</code>, as in</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet <span class="ex">=</span> <span class="st">"abcdefghijklmnopqrstuvwxyz"</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="op">&gt;&gt;&gt;</span> len<span class="kw">(</span><span class="ex">alphabet</span><span class="kw">)</span></span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="ex">26</span></span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">0</span><span class="pp">]</span></span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a><span class="st">'a'</span></span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">1</span><span class="pp">]</span></span>
-<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="st">'b'</span></span>
-<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">25</span><span class="pp">]</span></span>
-<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a><span class="st">'z'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet <span class="ex">=</span> <span class="st">"abcdefghijklmnopqrstuvwxyz"</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a><span class="op">&gt;&gt;&gt;</span> len<span class="kw">(</span><span class="ex">alphabet</span><span class="kw">)</span></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a><span class="ex">26</span></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">0</span><span class="pp">]</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1" aria-label="code-block-16-5"></a><span class="st">'a'</span></span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1" aria-label="code-block-16-6"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">1</span><span class="pp">]</span></span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1" aria-label="code-block-16-7"></a><span class="st">'b'</span></span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1" aria-label="code-block-16-8"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">25</span><span class="pp">]</span></span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1" aria-label="code-block-16-9"></a><span class="st">'z'</span></span></code></pre>
 </div>
 <p>Note that in our example we had 26 letters (a to z), but since
 indexing starts from 0, the final letter in the string is index 25. You
 can also use negative indices to start at the end of the string.
 Therefore, you can think of using negative indices as reading from
 “right to left” instead of “left to right”, as in</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[-</span><span class="ss">1</span><span class="pp">]</span></span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="st">'z'</span></span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[-</span><span class="ss">2</span><span class="pp">]</span></span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1" aria-label="code-block-15-4"></a><span class="st">'y'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[-</span><span class="ss">1</span><span class="pp">]</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="st">'z'</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[-</span><span class="ss">2</span><span class="pp">]</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a><span class="st">'y'</span></span></code></pre>
 </div>
 <p>Negative indices can be helpful when you don’t know how long a string
 is, but you know that you want specific characters located at the end of
@@ -731,17 +797,17 @@ range, this results in a syntax of
 <code>[desired start index : desired end index + 1 ]</code>. For
 example, using our <code>alphabet</code> string variable of length 26,
 we have</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">0:10</span><span class="pp">]</span></span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a><span class="st">'abcdefghij'</span></span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">0:5</span><span class="pp">]</span></span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a><span class="st">'abcde'</span></span>
-<span id="cb16-5"><a href="#cb16-5" tabindex="-1" aria-label="code-block-16-5"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">1:5</span><span class="pp">]</span></span>
-<span id="cb16-6"><a href="#cb16-6" tabindex="-1" aria-label="code-block-16-6"></a><span class="st">'bcde'</span></span>
-<span id="cb16-7"><a href="#cb16-7" tabindex="-1" aria-label="code-block-16-7"></a><span class="op">&gt;&gt;&gt;</span> z[1 <span class="bu">:</span> <span class="er">(</span><span class="ex">4+1</span><span class="kw">)</span><span class="ex">]</span>  <span class="co"># slices indices 1-4 (same as above, but with math)</span></span>
-<span id="cb16-8"><a href="#cb16-8" tabindex="-1" aria-label="code-block-16-8"></a><span class="st">'bcde'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">0:10</span><span class="pp">]</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="st">'abcdefghij'</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">0:5</span><span class="pp">]</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a><span class="st">'abcde'</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">1:5</span><span class="pp">]</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a><span class="st">'bcde'</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a><span class="op">&gt;&gt;&gt;</span> z[1 <span class="bu">:</span> <span class="er">(</span><span class="ex">4+1</span><span class="kw">)</span><span class="ex">]</span>  <span class="co"># slices indices 1-4 (same as above, but with math)</span></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a><span class="st">'bcde'</span></span></code></pre>
 </div>
 <p>Remember that when performing math inside of <code>[ ]</code> on
 indices, the numbers must be integers (i.e., <code>int</code> type
@@ -754,36 +820,95 @@ want the slice to stop at the end of the string. Therefore, leaving both
 sides blank (i.e., <code>[ : ]</code>) indicates that you just want the
 entire string returned. Using our <code>alphabet</code> string variable
 again, we have</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:</span><span class="pp">]</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="st">'abcdefghijklmnopqrstuvwxyz'</span></span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">2:</span><span class="pp">]</span></span>
-<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a><span class="st">'cdefghijklmnopqrstuvwxyz'</span></span>
-<span id="cb17-5"><a href="#cb17-5" tabindex="-1" aria-label="code-block-17-5"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:8</span><span class="pp">]</span></span>
-<span id="cb17-6"><a href="#cb17-6" tabindex="-1" aria-label="code-block-17-6"></a><span class="st">'abcdefgh'</span></span>
-<span id="cb17-7"><a href="#cb17-7" tabindex="-1" aria-label="code-block-17-7"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:</span><span class="pp">-</span><span class="ss">1</span><span class="pp">]</span></span>
-<span id="cb17-8"><a href="#cb17-8" tabindex="-1" aria-label="code-block-17-8"></a><span class="st">'abcdefghijklmnopqrstuvwxy'</span></span>
-<span id="cb17-9"><a href="#cb17-9" tabindex="-1" aria-label="code-block-17-9"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:</span><span class="pp">-</span><span class="ss">2</span><span class="pp">]</span></span>
-<span id="cb17-10"><a href="#cb17-10" tabindex="-1" aria-label="code-block-17-10"></a><span class="st">'abcdefghijklmnopqrstuvwx'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:</span><span class="pp">]</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a><span class="st">'abcdefghijklmnopqrstuvwxyz'</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">2:</span><span class="pp">]</span></span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a><span class="st">'cdefghijklmnopqrstuvwxyz'</span></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:8</span><span class="pp">]</span></span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1" aria-label="code-block-19-6"></a><span class="st">'abcdefgh'</span></span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1" aria-label="code-block-19-7"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:</span><span class="pp">-</span><span class="ss">1</span><span class="pp">]</span></span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1" aria-label="code-block-19-8"></a><span class="st">'abcdefghijklmnopqrstuvwxy'</span></span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1" aria-label="code-block-19-9"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:</span><span class="pp">-</span><span class="ss">2</span><span class="pp">]</span></span>
+<span id="cb19-10"><a href="#cb19-10" tabindex="-1" aria-label="code-block-19-10"></a><span class="st">'abcdefghijklmnopqrstuvwx'</span></span></code></pre>
 </div>
 <p>Because of the left side of <code>:</code> being included and the
 right side being excluded, this makes sure that
 <code>alphabet[ : index ] + alphabet[ index : ]</code> is always equal
 to <code>alphabet</code></p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:2</span><span class="pp">]</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="st">'ab'</span></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">2:</span><span class="pp">]</span></span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a><span class="st">'cdefghijklmnopqrstuvwxyz'</span></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:2</span><span class="pp">]</span> <span class="ex">+</span> alphabet<span class="pp">[</span><span class="ss">2:</span><span class="pp">]</span></span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a><span class="st">'abcdefghijklmnopqrstuvwxyz'</span></span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:4</span><span class="pp">]</span> <span class="ex">+</span> alphabet<span class="pp">[</span><span class="ss">4:</span><span class="pp">]</span></span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a><span class="st">'abcdefghijklmnopqrstuvwxyz'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:2</span><span class="pp">]</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a><span class="st">'ab'</span></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">2:</span><span class="pp">]</span></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a><span class="st">'cdefghijklmnopqrstuvwxyz'</span></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1" aria-label="code-block-20-5"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:2</span><span class="pp">]</span> <span class="ex">+</span> alphabet<span class="pp">[</span><span class="ss">2:</span><span class="pp">]</span></span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1" aria-label="code-block-20-6"></a><span class="st">'abcdefghijklmnopqrstuvwxyz'</span></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1" aria-label="code-block-20-7"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">:4</span><span class="pp">]</span> <span class="ex">+</span> alphabet<span class="pp">[</span><span class="ss">4:</span><span class="pp">]</span></span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1" aria-label="code-block-20-8"></a><span class="st">'abcdefghijklmnopqrstuvwxyz'</span></span></code></pre>
 </div>
+</section><section><h2 class="section-heading" id="the-list-frontier">The List Frontier<a class="anchor" aria-label="anchor" href="#the-list-frontier"></a></h2>
+<hr class="half-width"><p>The next thing to cover is how to group data – specifically by using
+something in Python called a “list”. Lists are defined as a “compound”
+datatype and are able to group together both numbers and strings, either
+individually or in a mix. The data contained in a list are comma
+separated and enclosed by square brackets.</p>
+<p>Here is a short lists of examples of lists in Python,</p>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="co"># empty list</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a>blank_list <span class="op">=</span> []</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1" aria-label="code-block-21-4"></a><span class="co"># list of length 1</span></span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1" aria-label="code-block-21-5"></a>some_list <span class="op">=</span> [<span class="st">"hola"</span>]</span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1" aria-label="code-block-21-6"></a></span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1" aria-label="code-block-21-7"></a><span class="co"># list of numbers of length 5</span></span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1" aria-label="code-block-21-8"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1" aria-label="code-block-21-9"></a></span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1" aria-label="code-block-21-10"></a><span class="co"># list of mixed types</span></span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1" aria-label="code-block-21-11"></a>mixed <span class="op">=</span> [<span class="st">"foo"</span>, <span class="fl">3.14</span>, <span class="st">"bar"</span>, <span class="va">True</span>]</span></code></pre>
+</div>
+<p>Unlike with strings, you can modify a specific entry in a list with
+slicing/indexing, as in</p>
+<div class="codewrapper sourceCode" id="cb22">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a>squares <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="st">'temp'</span>] </span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a><span class="bu">print</span>(squares[<span class="dv">6</span>])</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1" aria-label="code-block-22-3"></a><span class="co"># 'temp'</span></span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1" aria-label="code-block-22-4"></a></span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1" aria-label="code-block-22-5"></a>squares[<span class="dv">6</span>] <span class="op">=</span> <span class="dv">36</span></span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1" aria-label="code-block-22-6"></a><span class="bu">print</span>(squares)</span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1" aria-label="code-block-22-7"></a><span class="co"># [0, 1, 4, 9, 16, 25, 36]</span></span></code></pre>
+</div>
+<p>This slicing ability can also be used to modify sections of lists, or
+be used to completely remove sections, as in</p>
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a>letters <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'e'</span>]</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a><span class="bu">print</span>(letters[<span class="dv">2</span>:<span class="dv">4</span>])</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a><span class="co"># ['c', 'd']</span></span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a>letters[<span class="dv">2</span>:<span class="dv">4</span>] <span class="op">=</span> [<span class="st">'C'</span>, <span class="st">'D'</span>]</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a><span class="bu">print</span>(letters)</span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1" aria-label="code-block-23-7"></a><span class="co"># ['a', 'b', 'C', 'D', 'e']</span></span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1" aria-label="code-block-23-8"></a></span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1" aria-label="code-block-23-9"></a>letters[<span class="dv">2</span>:<span class="dv">4</span>] <span class="op">=</span> []</span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1" aria-label="code-block-23-10"></a><span class="bu">print</span>(letters)</span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1" aria-label="code-block-23-11"></a><span class="co"># ['a', 'b', 'e']</span></span>
+<span id="cb23-12"><a href="#cb23-12" tabindex="-1" aria-label="code-block-23-12"></a></span>
+<span id="cb23-13"><a href="#cb23-13" tabindex="-1" aria-label="code-block-23-13"></a>letters[:] <span class="op">=</span> []</span>
+<span id="cb23-14"><a href="#cb23-14" tabindex="-1" aria-label="code-block-23-14"></a><span class="bu">print</span>(letters)</span>
+<span id="cb23-15"><a href="#cb23-15" tabindex="-1" aria-label="code-block-23-15"></a><span class="co"># []</span></span></code></pre>
+</div>
+<p>Lists are a powerful data structure in Python (and almost every other
+programming language) and are used extensively in data analysis, machine
+learning, and many other applications.</p>
 <div id="knowledge-check" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -804,10 +929,10 @@ evaluate to?</p>
 </button>
 <div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="co">'nananananananana'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a><span class="co">'nananananananana'</span></span></code></pre>
 </div>
 <p>We can break this down step by step.</p>
 <ol style="list-style-type: decimal"><li>
@@ -848,6 +973,8 @@ data types.</li>
 other operations on values.</li>
 <li>String slicing and indexing allow you to extract specific portions
 of a string based on their position.</li>
+<li>Lists are a compound data type that can hold multiple values of
+different types and can be modified using slicing and indexing.</li>
 </ul></div>
 </div>
 </div>
@@ -858,7 +985,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="01_executing_python.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="03_variables_and_logic.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="03_loops_and_logic.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -866,8 +993,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Executing Python
         </a>
-        <a class="chapter-link float-end" href="03_variables_and_logic.html" rel="next">
-          Next: Variables and Logic...
+        <a class="chapter-link float-end" href="03_loops_and_logic.html" rel="next">
+          Next: Loops and Logic...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -914,9 +1041,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jhwohlgemuth.github.io/python-novice/02_types_and_operators.html",
   "identifier": "https://jhwohlgemuth.github.io/python-novice/02_types_and_operators.html",
-  "dateCreated": "2026-06-20",
-  "dateModified": "2026-06-20",
-  "datePublished": "2026-06-20"
+  "dateCreated": "2026-06-21",
+  "dateModified": "2026-06-21",
+  "datePublished": "2026-06-21"
 }
 
   </script><script>
