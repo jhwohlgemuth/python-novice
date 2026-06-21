@@ -12,6 +12,7 @@ exercises: 5
   - "How do you check the type of a variable?"
   - "What are the basic data types in Python?"
   - "How do you convert between different data types?"
+  - "What are the rules for naming variables in Python?"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -24,6 +25,8 @@ exercises: 5
   - Learn how to check the type of a variable in Python
   - Convert between different data types in Python
   - Use string slicing and indexing to manipulate strings in Python
+  - Use lists to group data in Python
+  - Understand the rules and conventions for naming variables in Python
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -270,9 +273,7 @@ Python also supports exponentiation with the `**` operator, modular division wit
 
 In Python (and many other programming languages), `=` is called the "assignment operator" and is used to assign a value to a variable.
 The `==` operator is called the "equality operator" and is used to compare two values for equality, returning `True` if they are equal and `False` otherwise. 
-We will cover `=` and `==` in more detail in the next episode. 
-For now, just be aware that they are different operators with different purposes.
-That being said, here are some examples of how `=` and `==` are used in Python,
+Here are some examples of how `=` and `==` are used in Python,
 
 ```bash
 >>> x = 5
@@ -282,6 +283,54 @@ False
 >>> x == 5
 True
 ```
+
+The equality operator, `==`, will be covered in the next episode, but it is important to understand that `=` and `==` are not interchangeable.
+Using `=` when you meant to use `==` can lead to unexpected results and/or errors.
+
+
+## Variables
+Variables are used in every aspect of modern life, from the nickname you have for your cat to how we store and analyze data in science and engineering.
+As it is in real life, variable names in Python can be almost anything, but there are *rules* and *conventions* to follow. 
+Rules impose restrictions on how you can name your variables, while conventions are more like guidelines that help make your code more readable and maintainable (e.g., "Pythonic").
+
+### ✅ Allowed
+  1. Variable names must start with a letter (a-z, A-Z) or an underscore (`_`)
+  2. Variable names can only contain letters, numbers, and underscores
+
+#### Examples
+```python
+cake = "chocolate"
+_cake = "vanilla"
+i_love_cake = True
+```
+
+### ❌ Not Allowed
+  1. Variable names cannot be a reserved keyword in Python (e.g., `if`, `else`, `for`, `while`, etc.)
+  2. Variable names cannot start with a number
+  3. Variable names cannot contain spaces (use underscores instead)
+
+#### Examples
+```python
+c@ke = "carrot"
+0cake = "bettercream"
+i love cake = False
+```
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+Not all programming languages have the same rules and conventions for variable names.
+
+For example, in R, variable names can contain dots (`.`) and dashes (`-`), but in Python, these characters are not allowed in variable names.
+In JavaScript, variable names can contain dollar signs (`$`), but in Python, this character is not allowed in variable names.
+In PowerShell, variable names are not case-sensitive, but in Python, variable names are case-sensitive.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: caution
+
+Python variable names are case-sensitive, meaning that `cake`, `Cake`, and `CAKE` are all different variables.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## String Slicing and Indexing
 
@@ -368,6 +417,62 @@ Because of the left side of `:` being included and the right side being excluded
 'abcdefghijklmnopqrstuvwxyz'
 ```
 
+## The List Frontier
+
+The next thing to cover is how to group data -- specifically by using something in Python called a "list". 
+Lists are defined as a "compound" datatype and are able to group together both numbers and strings, either individually or in a mix. 
+The data contained in a list are comma separated and enclosed by square brackets. 
+
+Here is a short lists of examples of lists in Python,
+
+```python
+# empty list
+blank_list = []
+
+# list of length 1
+some_list = ["hola"]
+
+# list of numbers of length 5
+numbers = [1, 2, 3, 4, 5]
+
+# list of mixed types
+mixed = ["foo", 3.14, "bar", True]
+```
+
+Unlike with strings, you can modify a specific entry in a list with slicing/indexing, as in
+
+```python
+squares = [0, 1, 4, 9, 16, 25, 'temp'] 
+print(squares[6])
+# 'temp'
+
+squares[6] = 36
+print(squares)
+# [0, 1, 4, 9, 16, 25, 36]
+```
+
+This slicing ability can also be used to modify sections of lists, or be used to completely remove sections, as in
+
+```python
+letters = ['a', 'b', 'c', 'd', 'e']
+print(letters[2:4])
+# ['c', 'd']
+
+letters[2:4] = ['C', 'D']
+print(letters)
+# ['a', 'b', 'C', 'D', 'e']
+
+letters[2:4] = []
+print(letters)
+# ['a', 'b', 'e']
+
+letters[:] = []
+print(letters)
+# []
+```
+
+Lists are a powerful data structure in Python (and almost every other programming language) and are used extensively in data analysis, machine learning, and many other applications.
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Knowledge Check
@@ -401,5 +506,6 @@ We can break this down step by step.
 - Python provides built-in functions for converting between different data types.
 - Python supports various operators for performing arithmetic and other operations on values.
 - String slicing and indexing allow you to extract specific portions of a string based on their position.
+- Lists are a compound data type that can hold multiple values of different types and can be modified using slicing and indexing.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
