@@ -10,7 +10,6 @@ exercises: 10
 - How are functions defined in Python?
 - What is the difference between a function definition and a function call?
 - How do you pass arguments to a function in Python?
-- Is Python a functional programming language? Why or why not?
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -18,11 +17,263 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Understand the concept of functions and their importance in programming
-- Learn how to define functions in Python
-- Learn how to pass arguments to functions in Python
+- Understand how to use functions
 - Distinguish between function definitions, function application, and function arguments
-- Understand the concept of functional programming and its relation to Python
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-> Ah, after that it is functions all the way down!
+::::::::::::::::::::::::::::::::::::: discussion
+
+Functions enable the re-use of code without copy-pasting or typing it over and over and duplicating code. 
+Functions are delayed computations that can be called at any time. 
+They are a fundamental building block of programming and are used to break down complex problems into smaller, more manageable pieces.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Function Junction
+
+A function is a block of code that only runs when it is called, but is designed to be reusable. 
+This is a major convenience when trying to repeat a specific action within your code. 
+We already used a couple pre-defined functions in this lesson, mainly `print` and `len`, but you can also create your own functions, which are called "user-defined functions".
+
+We can represent the idea of a function mathematically[^math] as
+
+[^math]: This is not the only way to represent functions mathematically, but it is a common notation.
+
+$
+f(x) = y
+$
+
+Where `f` is the name of the function, `x` is the argument, and `y` is the return value.
+
+The same idea can be represented in Python as
+
+```python
+def f(x):
+    """Function description"""
+    y = x + 1
+    return y
+```
+
+The function block begins with the `def` keyword followed by the desired name of the function with a set of parentheses `( )`. 
+Input parameters for the function are placed inside the parentheses next to the function name.
+
+In other words, the function above says
+
+> I want to define a function called `f` that depends on these `(x)`
+
+Just like with loops and if-statements, everything within a function block is indented, and the function block ends when the indentation ends. 
+A description of the function enclosed by a set of triple-quotes `'''` can be included at the top. This is optional but a good habit. 
+The "body" of the function is the code you want the function to perform when called, similar to the body of a loop or if-statement. 
+The `return` statement exits the function, and can pass back a specific variable or expression, usually the results of the body. 
+
+Once a function is defined, you are then able to "call" it (execute it).
+
+To see this in practice, open the file `functions_01.py` in the `scripts` directory and take a look at the code. 
+
+Run the code in `functions_01.py` and see what happens.
+
+```bash
+python scripts/functions_01.py
+```
+
+::::::::::::::::::::::::::::::::::::: spoiler
+
+```output
+8
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+It is good practice to define your functions at the top of the script, so they are more findable. 
+Doing so also makes your code flow better and makes it more readable than placing a function block in the middle of your script, for example.
+
+Because we told the function to return `print(z)` when the function call completed, we were actually able to see the output, `8`. 
+Instead, we could have told the function to `return z` when it finished, which would return the variable, `z`, rather than printing the actual value of `z`.
+
+To see this in practice, open the file `functions_02.py` in the `scripts` directory and take a look at the code. 
+
+Run the code in `functions_02.py` and see what happens.
+
+::::::::::::::::::::::::::::::::::::: spoiler
+
+```output
+8
+```
+
+Same as in `scripts/functions_01.py`
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+The function `add` was written exactly like the previously discussed `print_add` function, but with the key difference being `return z` instead of `return print(z)`. 
+Because of this, calling the function `add` by itself doesn't automatically print out the value of `z` -- as seen in "Example 2.1" in the above script. 
+This is because the function was told only to return a variable upon exit, not actually use the variable in a specific way.
+
+In "Example 2.2", we save the resulting variable of the function to a new variable called result. 
+This allows Python to access the `z` result of the function through result, which, upon printing, we see that the result of the function is `8`, just like before.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Let's Get Functional
+
+How might we combine (or "compose") the code from `functions_01.py` and `functions_02.py` to create a new function that both computes the sum of two numbers and prints the result?
+
+::::::::::::::::::::::::::::::::::::: solution
+
+## Solution
+```python
+def add(x, y):
+    """This function will sum x and y into a variable z and print the variable z when the function exits"""
+    return x + y
+
+
+def print_add(x, y):
+    """This function will sum x and y into a variable z and print the variable z when the function exits"""
+    print(add(x, y))
+
+
+print_add(3, 5)
+```
+
+This code hints at the idea of "function composition", which is the process of combining two or more functions to create a new function.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Pass It On
+
+Functions can take arguments, which are values that are passed to the function when it is called, and they can return values, which are the results of the function's computations.
+
+Argument order, naming, and default values are defined by the function definition.
+
+During function application ("execution") arguments can be "positional", meaning they are passed in a specific order, or "keyword", meaning they are passed with a specific name.
+
+```python
+def add(x, y):
+    return x + y
+
+# Positional arguments
+add(3, 5)
+
+# Keyword arguments only
+add(x=3, y=5)
+
+
+# Positional and keyword arguments
+add(3, y=5)
+```
+
+Default values are optional and defined in a similar way to how keyword arguments are passed, as in
+
+```python
+# The default value of y is 5
+def add(x, y=5):
+    return x + y
+
+
+add(3) # returns 8
+add(x=3) # returns 8
+add(3, 4) # returns 7
+```
+
+Finally, we can refer to functions based on how many arguments they take. 
+For example, a function that takes one argument is called a "unary function", a function that takes two arguments is called a "binary function", and so on. 
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## What's in a Name?
+
+What would you call a function that takes `N` arguments?
+
+::::::::::::::::::::::::::::::::::::: solution
+
+"N-ary" or "variadic" function, where `N` is a variable that can take on any value.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## One Line to Rule Them All
+
+Functions can be defined in-line with their application by using a special syntax called "lambda functions" or "anonymous functions".
+
+They are called "anonymous" because they do not have a name, and are often used for short, simple functions that are not intended to be reused. 
+They are more accurately called "lambda functions" as they use the `lambda` keyword in reference to the mathematical notation of lambda calculus[^lambda]. 
+Lambda functions are very useful when using higher-order functions, which are functions that take other functions as arguments or return functions as their output.
+
+```python
+# A lambda function that adds two numbers
+add = lambda x, y: x + y
+
+# Using the lambda function
+result = add(3, 5)
+print(result) # Output: 8
+```
+
+[^lambda]: Lambda calculus is a formal system in mathematical logic and computer science for expressing computation based on function abstraction and application. 
+Some historical accounts say Alphonso Church originally used $\hat{y}$ to represent functions, which became $\land y$ in his typed manuscripts, and took its final form of $\lambda y$ by the decision of a typesetter.
+
+## Functions All the Way Down
+
+Functions that accept functions as arguments or return functions as their output are called "higher-order functions". 
+They are a powerful tool for creating abstractions and can be used to create more complex functions from simpler ones, through a process called" function composition". 
+We cannot go too deep into higher-order functions in this lesson, but they are an important concept to understand as you continue to learn about functions and their applications in programming. 
+For now, here are some examples of higher-order functions in Python:
+
+```python
+# A higher-order function that takes a function as an argument
+def apply(func, x, y):
+    return func(x, y)
+
+
+result = apply(lambda x, y: x + y, 3, 5)
+print(result) # Output: 8
+
+add = lambda x, y: x + y
+result = apply(add, 3, 5)
+print(result) # Output: 8
+```
+
+In practice, higher-order functions like `map` and `filter` are commonly used in Python for applying a function to a list of values or filtering a list of values based on a condition, respectively.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Functional Finale
+
+Can you use `map` and `filter` to create a new list that contains the squares of all the even numbers from a given list of integers without hard-coding any values? Can you do it without using any variables?
+
+::::::::::::::::::::::::::::::::::::: solution
+
+```python
+is_even = lambda x: x % 2 == 0
+square = lambda x: x ** 2
+numbers = range(1, 10)
+
+squares = list(map(square, filter(is_even, numbers)))
+print(squares) # Output: [4, 16, 36, 64, 100]
+```
+
+Variables are not strictly necessary in this case, as we can directly pass the lambda functions to `map` and `filter` without assigning them to a variable.
+
+```python
+squares = list(map(lambda x: x ** 2, filter(lambda x: x % 2 == 0, range(1, 10))))
+print(squares) # Output: [4, 16, 36, 64, 100]
+```
+
+> *"…variables are a logically unnecessary but practically very useful device."*
+>
+> --Haskell Curry, Combinatory Logic, 1968, p. 154
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Functions are reusable blocks of code that perform a specific task and can be called at any time.
+- Functions are defined using the `def` keyword followed by the function name and parentheses containing any parameters.
+- Lambda functions are another way to define functions and are escpecially useful when using higher-order functions.
+- Higher-order functions are functions that take other functions as arguments or return functions as their output, and are a powerful tool for creating abstractions and composing functions.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
