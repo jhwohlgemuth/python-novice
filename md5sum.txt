@@ -8,6 +8,7 @@
 "episodes/02_types_and_operators.Rmd" "9e0364092b6dc12af603387792c8fc5a" "site/built/02_types_and_operators.md" "2026-06-21"
 "episodes/03_loops_and_logic.Rmd" "df4766c42f8f9b8c3a0c4e42f0ce31ac" "site/built/03_loops_and_logic.md" "2026-06-21"
 "episodes/04_functions_functions_functions.Rmd" "3071722841d8ac69569e847fe0354e34" "site/built/04_functions_functions_functions.md" "2026-06-21"
+"episodes/05_challenges.Rmd" "dcc8fb720ade81b05e2eb3f43cbd474b" "site/built/05_challenges.md" "2026-06-21"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2026-06-20"
 "learners/reference.md" "b2238a1bd032f28980e7b36d50e83242" "site/built/reference.md" "2026-06-20"
 "learners/setup.md" "1080bab2f3fdec0cf7376daffef990a1" "site/built/setup.md" "2026-06-21"
