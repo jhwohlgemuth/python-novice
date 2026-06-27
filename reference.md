@@ -92,7 +92,7 @@ print(total)
 
 Output:
 
-```python
+```output
 20
 ```
 
