@@ -174,7 +174,33 @@ You underestimate my power!
 ```
 
 A blank template file called `first_script.py` is included in the data you downloaded for this lesson.
-Use `vim` or your favorite text editor to open the file, `first_script.py`.
+Use your favorite text editor to open the file, `first_script.py`.
+
+::: tab
+
+### VS Code
+
+```bash
+code first_script.py
+```
+
+### Vim
+
+```bash
+vim first_script.py
+```
+
+### Neovim
+
+```bash
+nvim first_script.py
+```
+
+### Manual
+
+  - Right click file icon, select "Open With", and select your favorite text editor.
+
+:::
 
 Once you have opened this file, it's time to fill it with some code. 
 Entering code into a Python file works just like entering it into the interactive shell, just without the `>>>`. 

@@ -21,7 +21,7 @@ FIXME: place any data you want learners to use in `episodes/data` and then use
        a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
        link to it, replacing the example.com link.
 -->
-Download the [lesson scripts archive](data/scripts.zip) and unzip it to your Desktop
+Download the [lesson scripts archive](data/scripts.7z) and unzip it to your Desktop
 
 
 ## Software Setup
@@ -30,7 +30,7 @@ Download the [lesson scripts archive](data/scripts.zip) and unzip it to your Des
 
 ### Details
 
-This lesson requires Python (version 3.9 or newer recommended) along with `pip` for package management. You will use a terminal environment to run Python commands and install dependencies.
+This lesson requires Python (version 3.10 or newer recommended) along with `pip` for package management. You will use a terminal environment to run Python commands and install dependencies.
 
 You can verify an existing installation with:
 
@@ -88,7 +88,7 @@ sudo pacman -S python python-pip
 ::::::::::::::::::::::::::::::::::::::: caution
 
   - Some systems alias `python` → `python3`, but not all. You should prefer explicit `python3`.
-  - For containerized workflows, consider using a base image like `python:3.11-slim`.
+  - For containerized workflows, consider using a base image like `python:3.13.14-trixie`.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 

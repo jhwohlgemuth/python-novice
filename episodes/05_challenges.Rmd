@@ -12,6 +12,9 @@ exercises: 0
 | Counting the Sheep | Medium | `scripts/challenges/sheep.py` |
 | Finding the Needle | Hard | `scripts/challenges/needle.py` |
 
+
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## Slicing the Cake
 
 Who doesn't love slicing some cake? 
@@ -20,7 +23,9 @@ Your mission is to edit the line labeled as "TO-DO" to get the script to work pr
 After editing the script, run it to see if you correctly fixed things. 
 If you are successful, you will see `'Success!'` printed out.
 
-::::::::::::::::::::::::::::::::::::: spoiler
+::::::::::::::::::::::::::::::::::::: solution
+
+## Solution
 
 ```python
 # Set up lists
@@ -41,6 +46,10 @@ else:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## Calculating the Box
 
 Who doesn't love math and boxes? 
@@ -49,7 +58,9 @@ You will need to edit both the body of the function and the return line of the f
 After editing the script, run it to see if you correctly fixed things. 
 If you are successful, you will see `'Success!'` printed out.
 
-::::::::::::::::::::::::::::::::::::: spoiler
+::::::::::::::::::::::::::::::::::::: solution
+
+## Solution
 
 ```python
 def get_size(w, h, d):
@@ -79,6 +90,10 @@ else:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## Playing the Banjo
 
 Who doesn't love the banjo? 
@@ -98,7 +113,9 @@ Ryan plays the banjo
 rolf plays the banjo
 ```
 
-::::::::::::::::::::::::::::::::::::: spoiler
+::::::::::::::::::::::::::::::::::::: solution
+
+## Solution
 
 ```python
 def playing_banjo(name):
@@ -124,6 +141,10 @@ playing_banjo("rolf")
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## Counting the Sheep
 
 Who doesn't love sheep? 
@@ -133,7 +154,7 @@ You will only need to edit one line of the body of the function, marked by the "
 After editing the script, run it to see if you correctly fixed things (the function should be able to detect 17 sheep). 
 If you are successful, you will see `'Success!'` printed out.
 
-::::::::::::::::::::::::::::::::::::: spoiler
+::::::::::::::::::::::::::::::::::::: solution
 
 ```python
 def count_sheeps(sheep):
@@ -187,6 +208,10 @@ else:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## Finding the Needle
 Who doesn't love needles in haystacks? 
 The objective of this challenge is to fill in the missing information of the find_needle function so that it returns the position of "needle" in a given list. 
@@ -195,7 +220,7 @@ Note that you will need to add more than one line in the body of the loop even t
 After editing the script, run it to see if you correctly fixed things. 
 If you are successful, you will see `'Success!'` printed out.
 
-::::::::::::::::::::::::::::::::::::: spoiler
+::::::::::::::::::::::::::::::::::::: solution
 
 ```python
 def find_needle(haystack):
@@ -245,6 +270,8 @@ else:
     print("Try again!")
     print("You should find them at position 5 and position 1")
 ```
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

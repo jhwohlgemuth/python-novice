@@ -40,9 +40,7 @@ We can represent the idea of a function mathematically[^math] as
 
 [^math]: This is not the only way to represent functions mathematically, but it is a common notation.
 
-$
-f(x) = y
-$
+$f(x) = y$
 
 Where `f` is the name of the function, `x` is the argument, and `y` is the return value.
 
