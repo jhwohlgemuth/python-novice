@@ -71,9 +71,21 @@ To see this in practice, open the file `functions_01.py` in the `scripts` direct
 
 Run the code in `functions_01.py` and see what happens.
 
+::: tab
+
+### Python
+
 ```bash
 python scripts/functions_01.py
 ```
+
+### uv
+
+```bash
+uv run scripts/functions_01.py
+```
+
+:::
 
 ::::::::::::::::::::::::::::::::::::: spoiler
 
@@ -233,13 +245,14 @@ result = apply(add, 3, 5)
 print(result) # Output: 8
 ```
 
-In practice, higher-order functions like `map` and `filter` are commonly used in Python for applying a function to a list of values or filtering a list of values based on a condition, respectively.
+In practice, [higher-order functions](./reference#higher-order-functions) like `map` and `filter` are commonly used in Python for applying a function to a list of values or filtering a list of values based on a condition, respectively.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Functional Finale
 
-Can you use `map` and `filter` to create a new list that contains the squares of all the even numbers from a given list of integers without hard-coding any values? Can you do it without using any variables?
+Can you use `map` and `filter` to create a new list that contains the squares of all the even numbers from a given list of integers without hard-coding any values? 
+Can you do it without using any variables?
 
 ::::::::::::::::::::::::::::::::::::: solution
 
@@ -262,6 +275,8 @@ print(squares) # Output: [4, 16, 36, 64, 100]
 > *"…variables are a logically unnecessary but practically very useful device."*
 >
 > --Haskell Curry, Combinatory Logic, 1968, p. 154
+
+See the [reference](./reference) for more information on higher-order functions and list comprehensions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

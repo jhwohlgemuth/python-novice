@@ -38,9 +38,18 @@ for letter in letters:
     print(letter)
 ```
 
+:::::::::::::::::::::::::::::::::::::: discussion 
+
 The body of a "for" loop is separated from the rest of the code using indentation. 
-Indentation is Python's way of grouping statements, which is typically done by using either tabs or spaces (I used four spaces). 
-The use of either tabs or spaces is down to personal preference, but you need to be consistent or you will get errors in your code. 
+Indentation is Python's way of grouping statements. 
+The [official coding conventions for Python](https://peps.python.org/pep-0008/#indentation) dictate using 4 spaces for indentation.
+
+In general follow two rules when using indentation in Python:
+1. Use 4 spaces per indentation level.
+2. Never mix tabs and spaces.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 In actual English, you can think of the line `for letter in letters:` as meaning
 
 > "For every letter in `letters`, print the letter".
