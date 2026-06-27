@@ -14,22 +14,27 @@ def count_sheeps(sheep):
 
     return count
 
-# Our flock of "sheep" list
-flock = [True,  True,  True,  False, \
-          True,  True,  True,  True , \
-          True,  False, True,  False, \
-          True,  False, False, True , \
-          True,  True,  True,  True , \
-          False, False, True,  True ]
+def main():
+    # Our flock of "sheep" list
+    flock = [True,  True,  True,  False, \
+              True,  True,  True,  True , \
+              True,  False, True,  False, \
+              True,  False, False, True , \
+              True,  True,  True,  True , \
+              False, False, True,  True ]
 
-# Call the count_sheeps function
-flock_count = count_sheeps(flock)
+    # Call the count_sheeps function
+    flock_count = count_sheeps(flock)
 
-# Check to see if you are correct
-print("You counted this many sheep: ", flock_count)
+    # Check to see if you are correct
+    print("You counted this many sheep: ", flock_count)
 
-if flock_count == 17:
-    print("There are 17 sheep! Success!")
-else:
-    print("Try again!")
-    print("The sheep count should be 17")
+    if flock_count == 17:
+        print("There are 17 sheep! Success!")
+    else:
+        print("Try again!")
+        print("The sheep count should be 17")
+
+
+if __name__ == "__main__":
+    main()

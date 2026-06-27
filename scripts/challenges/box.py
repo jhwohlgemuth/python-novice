@@ -15,16 +15,21 @@ def get_size(w, h, d):
     return  # TO-DO
 
 
-# Test the get_size function for a couple box sizes
-box_1 = get_size(w=1, h=1, d=1)
-box_2 = get_size(w=4, h=2, d=6)
+def main():
+    # Test the get_size function for a couple box sizes
+    box_1 = get_size(w=1, h=1, d=1)
+    box_2 = get_size(w=4, h=2, d=6)
 
-# Check to see if you are correct
-print("Area and volume of 1x1x1 box: ", box_1)
-print("Area and volume of 4x2x6 box: ", box_2)
+    # Check to see if you are correct
+    print("Area and volume of 1x1x1 box: ", box_1)
+    print("Area and volume of 4x2x6 box: ", box_2)
 
-if (box_1 == [6, 1]) and (box_2 == [88, 48]):
-    print("Success!")
-else:
-    print("Try again!")
-    print("You should get [6,1] and [88,48]")
+    if (box_1 == [6, 1]) and (box_2 == [88, 48]):
+        print("Success!")
+    else:
+        print("Try again!")
+        print("You should get [6,1] and [88,48]")
+
+
+if __name__ == "__main__":
+    main()

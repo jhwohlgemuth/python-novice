@@ -498,6 +498,39 @@ We can break this down step by step.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## A`dict`-ed to Python
+
+We cannot cover every data type in Python in this lesson, but we will briefly mention one more important data type — the "dictionary" (or `dict` for short).
+A dictionary is a collection of key-value pairs, where each key is unique and maps to a specific value.
+Dictionaries are defined using curly braces `{}` and the key-value pairs are separated by colons, as in
+
+```python
+lookup = {'name': 'Batman', 'city': 'Gotham'}
+```
+
+Values in a dictionary can be accessed using their corresponding keys, as in
+
+```python
+name = lookup['name']
+print(name)
+```
+
+```output
+'Batman'
+```
+
+Values can also be modified or added to a dictionary using their keys, as in
+
+```python
+lookup['name'] = 'Superman'
+lookup['city'] = 'Metropolis'
+print(lookup['name'])
+```
+
+```output
+'Superman'
+```
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Python has built-in types that describe the nature of values and how they can be manipulated.

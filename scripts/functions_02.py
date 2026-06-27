@@ -7,9 +7,14 @@ def add(x, y):
     return z
 
 
-# Example 2.1: execute the function without saving the result
-add(3, 5)
+def main():
+    # Example 2.1: execute the function without saving the result
+    add(3, 5)
 
-# Example 2.2: execute the function while saving result to a variable
-result = add(3, 5)
-print(result)
+    # Example 2.2: execute the function while saving result to a variable
+    result = add(3, 5)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()

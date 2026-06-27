@@ -15,9 +15,15 @@ def playing_banjo(name):
         banjo = name + " does not play the banjo"
     return print(banjo)
 
-# Test cases to see if you are correct
-playing_banjo('Leah')
-playing_banjo('michael')
-playing_banjo('brian')
-playing_banjo('Ryan')
-playing_banjo('rolf')
+
+def main():
+    # Test cases to see if you are correct
+    playing_banjo('Leah')
+    playing_banjo('michael')
+    playing_banjo('brian')
+    playing_banjo('Ryan')
+    playing_banjo('rolf')
+
+
+if __name__ == "__main__":
+    main()

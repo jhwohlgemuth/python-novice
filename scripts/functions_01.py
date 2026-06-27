@@ -7,5 +7,10 @@ def print_add(x, y):
     return print(z)  # what is done on function exit
 
 
-# Example 1.1: execute the function without saving the result, with print
-print_add(x=3, y=5)
+def main():
+    # Example 1.1: execute the function without saving the result, with print
+    print_add(x=3, y=5)
+
+
+if __name__ == "__main__":
+    main()

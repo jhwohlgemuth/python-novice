@@ -24,6 +24,14 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+For this lesson, it would be a good idea to poll the learners about what operating system, shell, and text editor they are using.
+
+Helpers should keep an eye on the learners to make sure they are able to open a terminal, start a Python REPL session, and open a text editor.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Shell vs. Script
 
 When you execute Python code, you can do so in two main ways: through an interactive shell (sometimes called a "REPL") or by writing and running a Python script.
@@ -162,9 +170,21 @@ print("You underestimate my power!")
 ```
 you can run it with Python by executing the following command in your terminal,
 
+::: tab
+
+### Python
+
 ```bash
 python hello.py
 ```
+
+### uv
+
+```bash
+uv run hello.py
+```
+
+:::
 
 This will execute the code in `hello.py` and print the following output to the console,
 
@@ -196,9 +216,27 @@ vim first_script.py
 nvim first_script.py
 ```
 
-### Manual
+### Nano
 
-  - Right click file icon, select "Open With", and select your favorite text editor.
+```bash
+nano first_script.py
+```
+
+### EMACS
+
+```bash
+emacs first_script.py
+```
+
+### Sublime Text
+
+```bash
+subl first_script.py
+```
+
+### General (GUI)
+
+Right click file icon, select "Open With", and select your favorite text editor.
 
 :::
 
@@ -232,9 +270,21 @@ print("Jenny has ", z, " gallons of water in her pool.")
 
 After you have filled in your file with code (and saved), you can run it by executing the following in your terminal
 
+::: tab
+
+### Python
+
 ```bash
 python first_script.py
 ```
+
+### uv
+
+```bash
+uv run first_script.py
+```
+
+:::
 
 You should then see the following output displayed in your terminal
 
@@ -272,7 +322,25 @@ print(f"Jenny has {z} gallons of water in her pool.")
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Comments
+## The Main Event
+
+`__main__` is the standard Python pattern for code that should run only when a file is executed directly, not when it is imported as a module. 
+The usual form is `if __name__ == "__main__":`, and it is often used to call a `main()` function or launch command-line behavior.
+
+```python
+def main():
+    # Your main code here
+    print("This code runs when the script is executed directly.")
+
+if __name__ == "__main__":
+    main()
+```
+
+When Python runs a file directly, it sets that file's `__name__` to `"__main__"`; 
+when the same file is imported, `__name__` is set to the module name instead. 
+This lets you keep reusable functions and classes in the same file without automatically executing the script entry logic during imports.
+
+## The Comments Section
 
 Some final syntax that we need to cover before moving on is Python "comments". 
 After you have filled in your file with code, you can run it by executing the following in your terminalComments are not interpreted by Python and are used to clarify code — usually they act as notes to yourself or others to explain what a piece of code may be doing (they are otherwise hidden). 

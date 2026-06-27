@@ -1,12 +1,18 @@
 # logic_01.py
 
-# initialize a variable "x"
-x = 1
 
-# Example 1.1: check to see if "x" is equal to 1
-if x == 1:
-    print("x is 1")
+def main():
+    # initialize a variable "x"
+    x = 1
 
-# Example 1.2: check to see if "x" is equal to 2
-if x == 2:
-    print("x is 2")
+    # Example 1.1: check to see if "x" is equal to 1
+    if x == 1:
+        print("x is 1")
+
+    # Example 1.2: check to see if "x" is equal to 2
+    if x == 2:
+        print("x is 2")
+
+
+if __name__ == "__main__":
+    main()
