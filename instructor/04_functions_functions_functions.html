@@ -414,10 +414,35 @@ it).</p>
 in the <code>scripts</code> directory and take a look at the code.</p>
 <p>Run the code in <code>functions_01.py</code> and see what
 happens.</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  uv
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">python</span> scripts/functions_01.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">uv</span> run scripts/functions_01.py</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
@@ -501,20 +526,20 @@ result?</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="kw">def</span> add(x, y):</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a><span class="kw">def</span> print_add(x, y):</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a>    <span class="bu">print</span>(add(x, y))</span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a>print_add(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a><span class="kw">def</span> print_add(x, y):</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a>    <span class="bu">print</span>(add(x, y))</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1" aria-label="code-block-6-11"></a>print_add(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre>
 </div>
 <p>This code hints at the idea of “function composition”, which is the
 process of combining two or more functions to create a new function.</p>
@@ -531,35 +556,35 @@ function definition.</p>
 <p>During function application (“execution”) arguments can be
 “positional”, meaning they are passed in a specific order, or “keyword”,
 meaning they are passed with a specific name.</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="kw">def</span> add(x, y):</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="co"># Positional arguments</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a><span class="co"># Keyword arguments only</span></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a>add(x<span class="op">=</span><span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1" aria-label="code-block-6-11"></a><span class="co"># Positional and keyword arguments</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1" aria-label="code-block-6-12"></a>add(<span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span></code></pre>
-</div>
-<p>Default values are optional and defined in a similar way to how
-keyword arguments are passed, as in</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="co"># The default value of y is 5</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a><span class="kw">def</span> add(x, y<span class="op">=</span><span class="dv">5</span>):</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>add(<span class="dv">3</span>) <span class="co"># returns 8</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a>add(x<span class="op">=</span><span class="dv">3</span>) <span class="co"># returns 8</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a>add(<span class="dv">3</span>, <span class="dv">4</span>) <span class="co"># returns 7</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a><span class="co"># Positional arguments</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a><span class="co"># Keyword arguments only</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a>add(x<span class="op">=</span><span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1" aria-label="code-block-7-9"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1" aria-label="code-block-7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1" aria-label="code-block-7-11"></a><span class="co"># Positional and keyword arguments</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1" aria-label="code-block-7-12"></a>add(<span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span></code></pre>
+</div>
+<p>Default values are optional and defined in a similar way to how
+keyword arguments are passed, as in</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="co"># The default value of y is 5</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="kw">def</span> add(x, y<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a>add(<span class="dv">3</span>) <span class="co"># returns 8</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a>add(x<span class="op">=</span><span class="dv">3</span>) <span class="co"># returns 8</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a>add(<span class="dv">3</span>, <span class="dv">4</span>) <span class="co"># returns 7</span></span></code></pre>
 </div>
 <p>Finally, we can refer to functions based on how many arguments they
 take. For example, a function that takes one argument is called a “unary
@@ -601,15 +626,15 @@ the <code>lambda</code> keyword in reference to the mathematical
 notation of lambda calculus<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Lambda functions are very useful when
 using higher-order functions, which are functions that take other
 functions as arguments or return functions as their output.</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="co"># A lambda function that adds two numbers</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a><span class="co"># Using the lambda function</span></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>result <span class="op">=</span> add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="co"># A lambda function that adds two numbers</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="co"># Using the lambda function</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a>result <span class="op">=</span> add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
 </div>
 </section><section><h2 class="section-heading" id="functions-all-the-way-down">Functions All the Way Down<a class="anchor" aria-label="anchor" href="#functions-all-the-way-down"></a></h2>
 <hr class="half-width"><p>Functions that accept functions as arguments or return functions as
@@ -620,25 +645,25 @@ composition”. We cannot go too deep into higher-order functions in this
 lesson, but they are an important concept to understand as you continue
 to learn about functions and their applications in programming. For now,
 here are some examples of higher-order functions in Python:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="co"># A higher-order function that takes a function as an argument</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="kw">def</span> <span class="bu">apply</span>(func, x, y):</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a>    <span class="cf">return</span> func(x, y)</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a>result <span class="op">=</span> <span class="bu">apply</span>(<span class="kw">lambda</span> x, y: x <span class="op">+</span> y, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a>result <span class="op">=</span> <span class="bu">apply</span>(add, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="co"># A higher-order function that takes a function as an argument</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="kw">def</span> <span class="bu">apply</span>(func, x, y):</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>    <span class="cf">return</span> func(x, y)</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a>result <span class="op">=</span> <span class="bu">apply</span>(<span class="kw">lambda</span> x, y: x <span class="op">+</span> y, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1" aria-label="code-block-10-7"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1" aria-label="code-block-10-8"></a></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1" aria-label="code-block-10-9"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1" aria-label="code-block-10-10"></a>result <span class="op">=</span> <span class="bu">apply</span>(add, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1" aria-label="code-block-10-11"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
 </div>
-<p>In practice, higher-order functions like <code>map</code> and
-<code>filter</code> are commonly used in Python for applying a function
-to a list of values or filtering a list of values based on a condition,
-respectively.</p>
+<p>In practice, <a href="./reference#higher-order-functions">higher-order functions</a>
+like <code>map</code> and <code>filter</code> are commonly used in
+Python for applying a function to a list of values or filtering a list
+of values based on a condition, respectively.</p>
 <div id="functional-finale" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -661,30 +686,32 @@ any variables?</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a>is_even <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a>square <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>numbers <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(square, <span class="bu">filter</span>(is_even, numbers)))</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a>is_even <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a>square <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a>numbers <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(square, <span class="bu">filter</span>(is_even, numbers)))</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1" aria-label="code-block-11-6"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
 </div>
 <p>Variables are not strictly necessary in this case, as we can directly
 pass the lambda functions to <code>map</code> and <code>filter</code>
 without assigning them to a variable.</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span>, <span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>))))</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span>, <span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>))))</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
 </div>
 <blockquote>
 <p><em>“…variables are a logically unnecessary but practically very
 useful device.”</em></p>
 <p>–Haskell Curry, Combinatory Logic, 1968, p. 154</p>
 </blockquote>
+<p>See the <a href="./reference">reference</a> for more information on
+higher-order functions and list comprehensions.</p>
 </div>
 </div>
 </div>

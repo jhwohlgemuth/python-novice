@@ -291,7 +291,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2026-06-20 |
+        <p>Last updated on 2026-06-27 |
 
         <a href="https://github.com/jhwohlgemuth/python-novice/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -305,22 +305,203 @@
 
         
 
-<section><h2 class="section-heading" id="resources">Resources<a class="anchor" aria-label="anchor" href="#resources"></a></h2>
-<hr class="half-width"><ul><li><a href="https://www.python.org/" class="external-link">Python Website</a></li>
+<section><h2 class="section-heading" id="list-comprehensions">List Comprehensions<a class="anchor" aria-label="anchor" href="#list-comprehensions"></a></h2>
+<hr class="half-width"><p>List comprehensions provide a concise way to create lists. Common
+applications are to make new lists where each element is the result of
+some operations applied to each member of another sequence or iterable,
+or to create a subsequence of those elements that satisfy a certain
+condition.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a>squares <span class="op">=</span> [x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>)]</span></code></pre>
+</div>
+<p>List comprehension are the preferred way to create lists in Python,
+and are often more performant than using a <code>for</code> loop to
+build a list.</p>
+</section><section><h2 class="section-heading" id="higher-order-functions">Higher-Order Functions<a class="anchor" aria-label="anchor" href="#higher-order-functions"></a></h2>
+<hr class="half-width"><p>Higher-order functions take another function as an argument, return a
+function, or both. In Python, <code>map</code>, <code>filter</code>, and
+<code>reduce</code> are common tools for transforming data without
+writing an explicit loop.</p>
+<div class="section level3">
+<h3 id="map"><code>map</code><a class="anchor" aria-label="anchor" href="#map"></a></h3>
+<p>Use <code>map</code> to apply the same function to every item in an
+iterable.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">map</span>(morphism, iterable)</span></code></pre>
+</div>
+<p><code>map</code> returns a <code>map</code> object, so it is often
+wrapped in <code>list()</code> when you want to see all results at
+once.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span>, numbers))</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="bu">print</span>(squares)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[1, 4, 9, 16]</code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="filter"><code>filter</code><a class="anchor" aria-label="anchor" href="#filter"></a></h3>
+<p>Use <code>filter</code> to keep only the items that satisfy a
+condition.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="bu">filter</span>(predicate, iterable)</span></code></pre>
+</div>
+<p>For example, consider a predicate function that returns
+<code>True</code> for even numbers and <code>False</code> for odd
+numbers.</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>evens <span class="op">=</span> <span class="bu">list</span>(<span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>, numbers))</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="bu">print</span>(evens)</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a>[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="reduce"><code>reduce</code><a class="anchor" aria-label="anchor" href="#reduce"></a></h3>
+<p>Use <code>reduce</code> to combine all items in an iterable into a
+single value. Unlike <code>map</code> and <code>filter</code>,
+<code>reduce</code> is not a built-in function in Python 3, so it must
+be imported from <code>functools</code>.</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="im">from</span> functools <span class="im">import</span> <span class="bu">reduce</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="bu">reduce</span>(accumulator, iterable)</span></code></pre>
+</div>
+<p>The accumulator function passed to <code>reduce</code> should take
+two arguments: the accumulated value so far and the next item from the
+iterable.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="im">from</span> functools <span class="im">import</span> <span class="bu">reduce</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a>total <span class="op">=</span> <span class="bu">reduce</span>(<span class="kw">lambda</span> acc, x: acc <span class="op">+</span> x, numbers)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="bu">print</span>(total)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">10</span></span></code></pre>
+</div>
+<p><code>reduce</code> can also take an optional third argument, which
+is the initial value of the accumulator. If provided, this value will be
+used as the starting point for the accumulation.</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="im">from</span> functools <span class="im">import</span> <span class="bu">reduce</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a>total <span class="op">=</span> <span class="bu">reduce</span>(<span class="kw">lambda</span> acc, x: acc <span class="op">+</span> x, numbers, <span class="dv">10</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a><span class="bu">print</span>(total)</span></code></pre>
+</div>
+<p>Output:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="dv">20</span></span></code></pre>
+</div>
+<p>Use <code>reduce</code> when:</p>
+<ul><li>you want to collapse many values into one result</li>
+<li>you are computing a sum, product, combined string, or other
+accumulated result</li>
+</ul></div>
+<div class="section level3">
+<h3 id="combining-map-and-filter">Combining <code>map</code> and <code>filter</code>
+<a class="anchor" aria-label="anchor" href="#combining-map-and-filter"></a></h3>
+<p>These functions can be composed to build a data-processing
+pipeline.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a>square <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a>is_even <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a>numbers <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a>squares_of_evens <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(square, <span class="bu">filter</span>(is_even, numbers)))</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a><span class="bu">print</span>(squares_of_evens)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[4, 16, 36, 64]</code></pre>
+</div>
+<p>This filters the even numbers and then maps each remaining value to
+its square.</p>
+</div>
+<div class="section level3">
+<h3 id="comparing-with-for-loops">Comparing with <code>for</code> loops<a class="anchor" aria-label="anchor" href="#comparing-with-for-loops"></a></h3>
+<p>In the examples above, we could have used a <code>for</code> loop to
+achieve the same results. However, using <code>map</code>,
+<code>filter</code>, and <code>reduce</code> can lead to more concise
+and expressive code, especially when dealing with complex data
+transformations.</p>
+<p>For example, the following <code>for</code> loop computes the squares
+of even numbers:</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a>squares_of_evens <span class="op">=</span> []</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>):</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a>    <span class="cf">if</span> number <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1" aria-label="code-block-15-4"></a>        squares_of_evens.append(number <span class="op">**</span> <span class="dv">2</span>)</span></code></pre>
+</div>
+<p>Although this may work for some situations, it has more cognitive
+load than the equivalent <code>map</code> and <code>filter</code>
+solution, especially as the complexity of the data processing increases.
+Furthermore, <code>for</code> loops typically require mutation and are
+less modular than using higher-order functions, which can lead to more
+maintainable and reusable code.</p>
+</div>
+</section><section><h2 class="section-heading" id="resources">Resources<a class="anchor" aria-label="anchor" href="#resources"></a></h2>
+<hr class="half-width"><ul><li><a href="https://docs.python.org/3/glossary.html" class="external-link">Python
+Glossary</a></li>
+<li><a href="https://www.python.org/" class="external-link">Python Website</a></li>
 <li><a href="https://docs.python.org/3/" class="external-link">Python Documentation</a></li>
 <li><a href="https://docs.python.org/3/tutorial/introduction.html" class="external-link">Python
 Tutorial</a></li>
+<li><a href="https://docs.python.org/3/library/functions.html" class="external-link">Built-in
+Functions</a></li>
+<li><a href="https://docs.python.org/3/library/functools.html" class="external-link">functools
+Documentation</a></li>
 <li><a href="https://realpython.com/python-f-strings/" class="external-link">Including
 Variables in Strings</a></li>
 <li><a href="https://www.geeksforgeeks.org/python-3-input-function/" class="external-link">User Input
 Tutorial</a></li>
 </ul></section><section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
-<hr class="half-width"><p>This is a placeholder file. Please add content here.</p>
-<!--
+<hr class="half-width"><ul><li>
+<strong>higher-order function:</strong> a function that takes
+another function as an argument, returns a function, or both</li>
+<li>
+<strong>iterable:</strong> a value that can be looped over, such as
+a list, tuple, string, or range</li>
+<li>
+<strong>accumulator:</strong> the running result used by
+<code>reduce</code> as it combines values</li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
       </div>
@@ -375,7 +556,7 @@ any links that you are not going to use.
   "url": "https://jhwohlgemuth.github.io/python-novice/instructor/reference.html",
   "identifier": "https://jhwohlgemuth.github.io/python-novice/instructor/reference.html",
   "dateCreated": "2026-06-27",
-  "dateModified": "2026-06-20",
+  "dateModified": "2026-06-27",
   "datePublished": "2026-06-27"
 }
 

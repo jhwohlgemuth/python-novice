@@ -213,7 +213,8 @@
 <li><a href="#entering-the-python-repl">Entering the Python REPL</a></li>
 <li><a href="#repl-line-syntax">REPL Line Syntax</a></li>
 <li><a href="#writing-and-running-python-scripts">Writing and Running Python Scripts</a></li>
-<li><a href="#comments">Comments</a></li>
+<li><a href="#the-main-event">The Main Event</a></li>
+<li><a href="#the-comments-section">The Comments Section</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -357,6 +358,7 @@ REPL)</li>
 </div>
 </div>
 </div>
+
 <section><h2 class="section-heading" id="shell-vs--script">Shell vs. Script<a class="anchor" aria-label="anchor" href="#shell-vs--script"></a></h2>
 <hr class="half-width"><p>When you execute Python code, you can do so in two main ways: through
 an interactive shell (sometimes called a “REPL”) or by writing and
@@ -424,7 +426,7 @@ character, you just need to press <kbd>Enter</kbd> /
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>After entering the REPL, execute the following command to exit:</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -535,10 +537,35 @@ run it with Python. For example, if you have a file called
 </div>
 <p>you can run it with Python by executing the following command in your
 terminal,</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  uv
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">python</span> hello.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">uv</span> run hello.py</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <p>This will execute the code in <code>hello.py</code> and print the
 following output to the console,</p>
@@ -552,54 +579,90 @@ You underestimate my power!</code></pre>
 in the data you downloaded for this lesson. Use your favorite text
 editor to open the file, <code>first_script.py</code>.</p>
 <div class="tabs">
-<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
-<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
-  <h3 class="tab-header" id="nav-tab-heading-1-1">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-1">
   VS Code
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-2">
+<button class="nav-link" id="nav-tab-2-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-2" type="button" role="tab" aria-controls="nav-tabpanel-2-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-2">
   Vim
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-1-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-3" type="button" role="tab" aria-controls="nav-tabpanel-1-3" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-3">
+<button class="nav-link" id="nav-tab-2-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-3" type="button" role="tab" aria-controls="nav-tabpanel-2-3" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-3">
   Neovim
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-1-4" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-4" type="button" role="tab" aria-controls="nav-tabpanel-1-4" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-4">
-  Manual
+<button class="nav-link" id="nav-tab-2-4" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-4" type="button" role="tab" aria-controls="nav-tabpanel-2-4" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-4">
+  Nano
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-5" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-5" type="button" role="tab" aria-controls="nav-tabpanel-2-5" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-5">
+  EMACS
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-6" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-6" type="button" role="tab" aria-controls="nav-tabpanel-2-6" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-6">
+  Sublime Text
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-7" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-7" type="button" role="tab" aria-controls="nav-tabpanel-2-7" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-7">
+  General (GUI)
   </h3>
 </button>
 </div>
-</nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
-<div class="codewrapper sourceCode" id="cb11">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">code</span> first_script.py</span></code></pre>
-</div>
-</div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">vim</span> first_script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">code</span> first_script.py</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">nvim</span> first_script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">vim</span> first_script.py</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-4">
-<ul><li>Right click file icon, select “Open With”, and select your favorite
-text editor.</li>
-</ul></div>
+<div id="nav-tabpanel-2-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-3">
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">nvim</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-4">
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="fu">nano</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-5" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-5">
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">emacs</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-6" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-6">
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="ex">subl</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-7" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-7">
+<p>Right click file icon, select “Open With”, and select your favorite
+text editor.</p>
+</div>
 </div>
 </div>
 <p>Once you have opened this file, it’s time to fill it with some code.
@@ -610,35 +673,60 @@ statement or piece of code, just move on to the next line. A blank line
 in your file will cause no harm, as it just means you are not trying to
 execute code on that line. For testing purposes, let’s fill out
 <code>first_script.py</code> with the following code</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co"># top of the file</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="co">'''</span></span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="co">Showing off commenting out multiple lines.</span></span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a><span class="co">Sometimes comments of this nature are used</span></span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a><span class="co">to provide a description of the file at</span></span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a><span class="co">the top of the file.</span></span>
-<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="co">They can span multiple lines when enclosed</span></span>
-<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a><span class="co">by a pair of three single quotes.</span></span>
-<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a><span class="co">'''</span></span>
-<span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a></span>
-<span id="cb14-11"><a href="#cb14-11" tabindex="-1" aria-label="code-block-14-11"></a><span class="bu">print</span>(<span class="st">"Hello from your first script!"</span>)</span>
-<span id="cb14-12"><a href="#cb14-12" tabindex="-1" aria-label="code-block-14-12"></a></span>
-<span id="cb14-13"><a href="#cb14-13" tabindex="-1" aria-label="code-block-14-13"></a><span class="co"># Add some numbers</span></span>
-<span id="cb14-14"><a href="#cb14-14" tabindex="-1" aria-label="code-block-14-14"></a>x <span class="op">=</span> <span class="fl">8.675</span></span>
-<span id="cb14-15"><a href="#cb14-15" tabindex="-1" aria-label="code-block-14-15"></a>y <span class="op">=</span> <span class="fl">3.09</span></span>
-<span id="cb14-16"><a href="#cb14-16" tabindex="-1" aria-label="code-block-14-16"></a>z <span class="op">=</span> x <span class="op">+</span> y</span>
-<span id="cb14-17"><a href="#cb14-17" tabindex="-1" aria-label="code-block-14-17"></a></span>
-<span id="cb14-18"><a href="#cb14-18" tabindex="-1" aria-label="code-block-14-18"></a><span class="co"># Print some output</span></span>
-<span id="cb14-19"><a href="#cb14-19" tabindex="-1" aria-label="code-block-14-19"></a><span class="bu">print</span>(<span class="st">"Jenny has "</span>, z, <span class="st">" gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="co"># top of the file</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="co">'''</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="co">Showing off commenting out multiple lines.</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a><span class="co">Sometimes comments of this nature are used</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="co">to provide a description of the file at</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a><span class="co">the top of the file.</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a><span class="co">They can span multiple lines when enclosed</span></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a><span class="co">by a pair of three single quotes.</span></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1" aria-label="code-block-18-9"></a><span class="co">'''</span></span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1" aria-label="code-block-18-10"></a></span>
+<span id="cb18-11"><a href="#cb18-11" tabindex="-1" aria-label="code-block-18-11"></a><span class="bu">print</span>(<span class="st">"Hello from your first script!"</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" tabindex="-1" aria-label="code-block-18-12"></a></span>
+<span id="cb18-13"><a href="#cb18-13" tabindex="-1" aria-label="code-block-18-13"></a><span class="co"># Add some numbers</span></span>
+<span id="cb18-14"><a href="#cb18-14" tabindex="-1" aria-label="code-block-18-14"></a>x <span class="op">=</span> <span class="fl">8.675</span></span>
+<span id="cb18-15"><a href="#cb18-15" tabindex="-1" aria-label="code-block-18-15"></a>y <span class="op">=</span> <span class="fl">3.09</span></span>
+<span id="cb18-16"><a href="#cb18-16" tabindex="-1" aria-label="code-block-18-16"></a>z <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb18-17"><a href="#cb18-17" tabindex="-1" aria-label="code-block-18-17"></a></span>
+<span id="cb18-18"><a href="#cb18-18" tabindex="-1" aria-label="code-block-18-18"></a><span class="co"># Print some output</span></span>
+<span id="cb18-19"><a href="#cb18-19" tabindex="-1" aria-label="code-block-18-19"></a><span class="bu">print</span>(<span class="st">"Jenny has "</span>, z, <span class="st">" gallons of water in her pool."</span>)</span></code></pre>
 </div>
 <p>After you have filled in your file with code (and saved), you can run
 it by executing the following in your terminal</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="tabs">
+<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-3-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-1" type="button" role="tab" aria-controls="nav-tabpanel-3-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-3-1">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-3-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-2" type="button" role="tab" aria-controls="nav-tabpanel-3-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-3-2">
+  uv
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-3" class="tab-content">
+<div id="nav-tabpanel-3-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-1">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">python</span> first_script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="ex">python</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-3-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-2">
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="ex">uv</span> run first_script.py</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <p>You should then see the following output displayed in your
 terminal</p>
@@ -666,17 +754,17 @@ Jenny has  11.765  gallons of water in her pool.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>There are extra spaces in the output because we used commas to
 separate the different items in our <code>print</code> statement. When
 you use commas in a <code>print</code> statement, Python automatically
 adds a space between each item.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="co"># Print without extra spaces</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="bu">print</span>(<span class="st">"Jenny has"</span>, z, <span class="st">"gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="co"># Print without extra spaces</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a><span class="bu">print</span>(<span class="st">"Jenny has"</span>, z, <span class="st">"gallons of water in her pool."</span>)</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="alternative-solution-1">Alternative Solution<a class="anchor" aria-label="anchor" href="#alternative-solution-1"></a></h3>
@@ -684,18 +772,39 @@ adds a space between each item.</p>
 output. There are many reasons why f-strings are generally preferred
 over using commas in <code>print</code> statements including improved
 control and readability.</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="co"># Print using an f-string</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="bu">print</span>(<span class="ss">f"Jenny has </span><span class="sc">{</span>z<span class="sc">}</span><span class="ss"> gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="co"># Print using an f-string</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a><span class="bu">print</span>(<span class="ss">f"Jenny has </span><span class="sc">{</span>z<span class="sc">}</span><span class="ss"> gallons of water in her pool."</span>)</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="comments">Comments<a class="anchor" aria-label="anchor" href="#comments"></a></h2>
+</section><section><h2 class="section-heading" id="the-main-event">The Main Event<a class="anchor" aria-label="anchor" href="#the-main-event"></a></h2>
+<hr class="half-width"><p><code>__main__</code> is the standard Python pattern for code that
+should run only when a file is executed directly, not when it is
+imported as a module. The usual form is
+<code>if __name__ == "__main__":</code>, and it is often used to call a
+<code>main()</code> function or launch command-line behavior.</p>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a><span class="kw">def</span> main():</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1" aria-label="code-block-24-2"></a>    <span class="co"># Your main code here</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1" aria-label="code-block-24-3"></a>    <span class="bu">print</span>(<span class="st">"This code runs when the script is executed directly."</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1" aria-label="code-block-24-4"></a></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1" aria-label="code-block-24-5"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1" aria-label="code-block-24-6"></a>    main()</span></code></pre>
+</div>
+<p>When Python runs a file directly, it sets that file’s
+<code>__name__</code> to <code>"__main__"</code>; when the same file is
+imported, <code>__name__</code> is set to the module name instead. This
+lets you keep reusable functions and classes in the same file without
+automatically executing the script entry logic during imports.</p>
+</section><section><h2 class="section-heading" id="the-comments-section">The Comments Section<a class="anchor" aria-label="anchor" href="#the-comments-section"></a></h2>
 <hr class="half-width"><p>Some final syntax that we need to cover before moving on is Python
 “comments”. After you have filled in your file with code, you can run it
 by executing the following in your terminalComments are not interpreted
@@ -708,14 +817,14 @@ at the start of a brand new line or following pieces of code. However,
 the <code>#</code> symbol enclosed by a pair of <code>"</code> or
 <code>'</code> is just a hash character and has no effect. For example,
 consider the following code,</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># this is a comment</span></span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">"Comments are hidden"</span><span class="kw">)</span> <span class="co"># this is also a comment</span></span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a><span class="st">'Comments are hidden'</span></span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">" # this is not a comment because enclosed in quotes"</span><span class="kw">)</span></span>
-<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a> <span class="co"># this is not a comment because enclosed in quotes</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1" aria-label="code-block-25-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># this is a comment</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1" aria-label="code-block-25-2"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">"Comments are hidden"</span><span class="kw">)</span> <span class="co"># this is also a comment</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1" aria-label="code-block-25-3"></a><span class="st">'Comments are hidden'</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1" aria-label="code-block-25-4"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">" # this is not a comment because enclosed in quotes"</span><span class="kw">)</span></span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1" aria-label="code-block-25-5"></a> <span class="co"># this is not a comment because enclosed in quotes</span></span></code></pre>
 </div>
 <p>Comments are used heavily throughout this lesson and, other than the
 above example, you do not have to type in the comments yourself while

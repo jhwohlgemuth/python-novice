@@ -461,7 +461,7 @@ character, you just need to press <kbd>Enter</kbd> /
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>After entering the REPL, execute the following command to exit:</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -577,10 +577,35 @@ run it with Python. For example, if you have a file called
 </div>
 <p>you can run it with Python by executing the following command in your
 terminal,</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  uv
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">python</span> hello.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">uv</span> run hello.py</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <p>This will execute the code in <code>hello.py</code> and print the
 following output to the console,</p>
@@ -594,55 +619,89 @@ You underestimate my power!</code></pre>
 in the data you downloaded for this lesson. Use your favorite text
 editor to open the file, <code>first_script.py</code>.</p>
 <div class="tabs">
-<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
-<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
-  <h3 class="tab-header" id="nav-tab-heading-1-1">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-1">
   VS Code
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-2">
+<button class="nav-link" id="nav-tab-2-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-2" type="button" role="tab" aria-controls="nav-tabpanel-2-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-2">
   Vim
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-1-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-3" type="button" role="tab" aria-controls="nav-tabpanel-1-3" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-3">
+<button class="nav-link" id="nav-tab-2-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-3" type="button" role="tab" aria-controls="nav-tabpanel-2-3" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-3">
   Neovim
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-1-4" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-4" type="button" role="tab" aria-controls="nav-tabpanel-1-4" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-4">
-  Manual
+<button class="nav-link" id="nav-tab-2-4" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-4" type="button" role="tab" aria-controls="nav-tabpanel-2-4" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-4">
+  Nano
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-5" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-5" type="button" role="tab" aria-controls="nav-tabpanel-2-5" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-5">
+  EMACS
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-6" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-6" type="button" role="tab" aria-controls="nav-tabpanel-2-6" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-6">
+  Sublime Text
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-7" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-7" type="button" role="tab" aria-controls="nav-tabpanel-2-7" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-7">
+  General (GUI)
   </h3>
 </button>
 </div>
-</nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
-<div class="codewrapper sourceCode" id="cb11">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">code</span> first_script.py</span></code></pre>
-</div>
-</div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">vim</span> first_script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">code</span> first_script.py</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">nvim</span> first_script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">vim</span> first_script.py</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-4">
-<ul>
-<li>Right click file icon, select “Open With”, and select your favorite
-text editor.</li>
-</ul>
+<div id="nav-tabpanel-2-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-3">
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">nvim</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-4">
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="fu">nano</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-5" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-5">
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">emacs</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-6" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-6">
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="ex">subl</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-7" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-7">
+<p>Right click file icon, select “Open With”, and select your favorite
+text editor.</p>
 </div>
 </div>
 </div>
@@ -654,35 +713,60 @@ statement or piece of code, just move on to the next line. A blank line
 in your file will cause no harm, as it just means you are not trying to
 execute code on that line. For testing purposes, let’s fill out
 <code>first_script.py</code> with the following code</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co"># top of the file</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="co">'''</span></span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="co">Showing off commenting out multiple lines.</span></span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a><span class="co">Sometimes comments of this nature are used</span></span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a><span class="co">to provide a description of the file at</span></span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a><span class="co">the top of the file.</span></span>
-<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="co">They can span multiple lines when enclosed</span></span>
-<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a><span class="co">by a pair of three single quotes.</span></span>
-<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a><span class="co">'''</span></span>
-<span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a></span>
-<span id="cb14-11"><a href="#cb14-11" tabindex="-1" aria-label="code-block-14-11"></a><span class="bu">print</span>(<span class="st">"Hello from your first script!"</span>)</span>
-<span id="cb14-12"><a href="#cb14-12" tabindex="-1" aria-label="code-block-14-12"></a></span>
-<span id="cb14-13"><a href="#cb14-13" tabindex="-1" aria-label="code-block-14-13"></a><span class="co"># Add some numbers</span></span>
-<span id="cb14-14"><a href="#cb14-14" tabindex="-1" aria-label="code-block-14-14"></a>x <span class="op">=</span> <span class="fl">8.675</span></span>
-<span id="cb14-15"><a href="#cb14-15" tabindex="-1" aria-label="code-block-14-15"></a>y <span class="op">=</span> <span class="fl">3.09</span></span>
-<span id="cb14-16"><a href="#cb14-16" tabindex="-1" aria-label="code-block-14-16"></a>z <span class="op">=</span> x <span class="op">+</span> y</span>
-<span id="cb14-17"><a href="#cb14-17" tabindex="-1" aria-label="code-block-14-17"></a></span>
-<span id="cb14-18"><a href="#cb14-18" tabindex="-1" aria-label="code-block-14-18"></a><span class="co"># Print some output</span></span>
-<span id="cb14-19"><a href="#cb14-19" tabindex="-1" aria-label="code-block-14-19"></a><span class="bu">print</span>(<span class="st">"Jenny has "</span>, z, <span class="st">" gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="co"># top of the file</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="co">'''</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="co">Showing off commenting out multiple lines.</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a><span class="co">Sometimes comments of this nature are used</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="co">to provide a description of the file at</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a><span class="co">the top of the file.</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a><span class="co">They can span multiple lines when enclosed</span></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a><span class="co">by a pair of three single quotes.</span></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1" aria-label="code-block-18-9"></a><span class="co">'''</span></span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1" aria-label="code-block-18-10"></a></span>
+<span id="cb18-11"><a href="#cb18-11" tabindex="-1" aria-label="code-block-18-11"></a><span class="bu">print</span>(<span class="st">"Hello from your first script!"</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" tabindex="-1" aria-label="code-block-18-12"></a></span>
+<span id="cb18-13"><a href="#cb18-13" tabindex="-1" aria-label="code-block-18-13"></a><span class="co"># Add some numbers</span></span>
+<span id="cb18-14"><a href="#cb18-14" tabindex="-1" aria-label="code-block-18-14"></a>x <span class="op">=</span> <span class="fl">8.675</span></span>
+<span id="cb18-15"><a href="#cb18-15" tabindex="-1" aria-label="code-block-18-15"></a>y <span class="op">=</span> <span class="fl">3.09</span></span>
+<span id="cb18-16"><a href="#cb18-16" tabindex="-1" aria-label="code-block-18-16"></a>z <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb18-17"><a href="#cb18-17" tabindex="-1" aria-label="code-block-18-17"></a></span>
+<span id="cb18-18"><a href="#cb18-18" tabindex="-1" aria-label="code-block-18-18"></a><span class="co"># Print some output</span></span>
+<span id="cb18-19"><a href="#cb18-19" tabindex="-1" aria-label="code-block-18-19"></a><span class="bu">print</span>(<span class="st">"Jenny has "</span>, z, <span class="st">" gallons of water in her pool."</span>)</span></code></pre>
 </div>
 <p>After you have filled in your file with code (and saved), you can run
 it by executing the following in your terminal</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="tabs">
+<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-3-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-1" type="button" role="tab" aria-controls="nav-tabpanel-3-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-3-1">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-3-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-2" type="button" role="tab" aria-controls="nav-tabpanel-3-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-3-2">
+  uv
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-3" class="tab-content">
+<div id="nav-tabpanel-3-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-1">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">python</span> first_script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="ex">python</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-3-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-2">
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="ex">uv</span> run first_script.py</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <p>You should then see the following output displayed in your
 terminal</p>
@@ -710,17 +794,17 @@ Jenny has  11.765  gallons of water in her pool.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>There are extra spaces in the output because we used commas to
 separate the different items in our <code>print</code> statement. When
 you use commas in a <code>print</code> statement, Python automatically
 adds a space between each item.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="co"># Print without extra spaces</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="bu">print</span>(<span class="st">"Jenny has"</span>, z, <span class="st">"gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="co"># Print without extra spaces</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a><span class="bu">print</span>(<span class="st">"Jenny has"</span>, z, <span class="st">"gallons of water in her pool."</span>)</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="alternative-solution-1">Alternative Solution<a class="anchor" aria-label="anchor" href="#alternative-solution-1"></a>
@@ -729,18 +813,41 @@ adds a space between each item.</p>
 output. There are many reasons why f-strings are generally preferred
 over using commas in <code>print</code> statements including improved
 control and readability.</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="co"># Print using an f-string</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="bu">print</span>(<span class="ss">f"Jenny has </span><span class="sc">{</span>z<span class="sc">}</span><span class="ss"> gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="co"># Print using an f-string</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a><span class="bu">print</span>(<span class="ss">f"Jenny has </span><span class="sc">{</span>z<span class="sc">}</span><span class="ss"> gallons of water in her pool."</span>)</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="comments">Comments<a class="anchor" aria-label="anchor" href="#comments"></a>
+</section><section><h2 class="section-heading" id="the-main-event">The Main Event<a class="anchor" aria-label="anchor" href="#the-main-event"></a>
+</h2>
+<hr class="half-width">
+<p><code>__main__</code> is the standard Python pattern for code that
+should run only when a file is executed directly, not when it is
+imported as a module. The usual form is
+<code>if __name__ == "__main__":</code>, and it is often used to call a
+<code>main()</code> function or launch command-line behavior.</p>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a><span class="kw">def</span> main():</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1" aria-label="code-block-24-2"></a>    <span class="co"># Your main code here</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1" aria-label="code-block-24-3"></a>    <span class="bu">print</span>(<span class="st">"This code runs when the script is executed directly."</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1" aria-label="code-block-24-4"></a></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1" aria-label="code-block-24-5"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1" aria-label="code-block-24-6"></a>    main()</span></code></pre>
+</div>
+<p>When Python runs a file directly, it sets that file’s
+<code>__name__</code> to <code>"__main__"</code>; when the same file is
+imported, <code>__name__</code> is set to the module name instead. This
+lets you keep reusable functions and classes in the same file without
+automatically executing the script entry logic during imports.</p>
+</section><section><h2 class="section-heading" id="the-comments-section">The Comments Section<a class="anchor" aria-label="anchor" href="#the-comments-section"></a>
 </h2>
 <hr class="half-width">
 <p>Some final syntax that we need to cover before moving on is Python
@@ -755,14 +862,14 @@ at the start of a brand new line or following pieces of code. However,
 the <code>#</code> symbol enclosed by a pair of <code>"</code> or
 <code>'</code> is just a hash character and has no effect. For example,
 consider the following code,</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># this is a comment</span></span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">"Comments are hidden"</span><span class="kw">)</span> <span class="co"># this is also a comment</span></span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a><span class="st">'Comments are hidden'</span></span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">" # this is not a comment because enclosed in quotes"</span><span class="kw">)</span></span>
-<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a> <span class="co"># this is not a comment because enclosed in quotes</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1" aria-label="code-block-25-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># this is a comment</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1" aria-label="code-block-25-2"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">"Comments are hidden"</span><span class="kw">)</span> <span class="co"># this is also a comment</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1" aria-label="code-block-25-3"></a><span class="st">'Comments are hidden'</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1" aria-label="code-block-25-4"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">" # this is not a comment because enclosed in quotes"</span><span class="kw">)</span></span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1" aria-label="code-block-25-5"></a> <span class="co"># this is not a comment because enclosed in quotes</span></span></code></pre>
 </div>
 <p>Comments are used heavily throughout this lesson and, other than the
 above example, you do not have to type in the comments yourself while
@@ -1482,6 +1589,47 @@ string <code>'nananananananana'</code>.</li>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="adict-ed-to-python">A<code>dict</code>-ed to Python<a class="anchor" aria-label="anchor" href="#adict-ed-to-python"></a>
+</h2>
+<hr class="half-width">
+<p>We cannot cover every data type in Python in this lesson, but we will
+briefly mention one more important data type — the “dictionary” (or
+<code>dict</code> for short). A dictionary is a collection of key-value
+pairs, where each key is unique and maps to a specific value.
+Dictionaries are defined using curly braces <code>{}</code> and the
+key-value pairs are separated by colons, as in</p>
+<div class="codewrapper sourceCode" id="cb25">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1" aria-label="code-block-25-1"></a>lookup <span class="op">=</span> {<span class="st">'name'</span>: <span class="st">'Batman'</span>, <span class="st">'city'</span>: <span class="st">'Gotham'</span>}</span></code></pre>
+</div>
+<p>Values in a dictionary can be accessed using their corresponding
+keys, as in</p>
+<div class="codewrapper sourceCode" id="cb26">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1" aria-label="code-block-26-1"></a>name <span class="op">=</span> lookup[<span class="st">'name'</span>]</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1" aria-label="code-block-26-2"></a><span class="bu">print</span>(name)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="st">'Batman'</span></span></code></pre>
+</div>
+<p>Values can also be modified or added to a dictionary using their
+keys, as in</p>
+<div class="codewrapper sourceCode" id="cb28">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1" aria-label="code-block-28-1"></a>lookup[<span class="st">'name'</span>] <span class="op">=</span> <span class="st">'Superman'</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1" aria-label="code-block-28-2"></a>lookup[<span class="st">'city'</span>] <span class="op">=</span> <span class="st">'Metropolis'</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1" aria-label="code-block-28-3"></a><span class="bu">print</span>(lookup[<span class="st">'name'</span>])</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="st">'Superman'</span></span></code></pre>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1514,7 +1662,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03_loops_and_logic"><p>Content from <a href="03_loops_and_logic.html">Loops and Logic</a></p>
 <hr>
-<p>Last updated on 2026-06-21 |
+<p>Last updated on 2026-06-27 |
 
         <a href="https://github.com/jhwohlgemuth/python-novice/edit/main/episodes/03_loops_and_logic.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1574,13 +1722,23 @@ is</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>    <span class="co"># Code to execute for each item in the sequence</span></span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>    <span class="bu">print</span>(letter)</span></code></pre>
 </div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
 <p>The body of a “for” loop is separated from the rest of the code using
-indentation. Indentation is Python’s way of grouping statements, which
-is typically done by using either tabs or spaces (I used four spaces).
-The use of either tabs or spaces is down to personal preference, but you
-need to be consistent or you will get errors in your code. In actual
-English, you can think of the line <code>for letter in letters:</code>
-as meaning</p>
+indentation. Indentation is Python’s way of grouping statements. The <a href="https://peps.python.org/pep-0008/#indentation" class="external-link">official coding
+conventions for Python</a> dictate using 4 spaces for indentation.</p>
+<p>In general follow two rules when using indentation in Python: 1. Use
+4 spaces per indentation level. 2. Never mix tabs and spaces.</p>
+</div>
+</div>
+</div>
+<p>In actual English, you can think of the line
+<code>for letter in letters:</code> as meaning</p>
 <blockquote>
 <p>“For every letter in <code>letters</code>, print the letter”.</p>
 </blockquote>
@@ -1771,7 +1929,7 @@ have changed and we would have gotten stuck in the loop (as both
 conditions would always remain <code>True</code>). In general, if you
 can convert a <code>while</code> loop into a <code>for</code> loop, it
 is recommended to use the <code>for</code> loop version instead.</p>
-<div id="discussion1" class="callout discussion">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -2119,10 +2277,35 @@ it).</p>
 in the <code>scripts</code> directory and take a look at the code.</p>
 <p>Run the code in <code>functions_01.py</code> and see what
 happens.</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  uv
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">python</span> scripts/functions_01.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">uv</span> run scripts/functions_01.py</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
@@ -2206,20 +2389,20 @@ result?</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="kw">def</span> add(x, y):</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a><span class="kw">def</span> print_add(x, y):</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a>    <span class="bu">print</span>(add(x, y))</span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a>print_add(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a><span class="kw">def</span> print_add(x, y):</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a>    <span class="co">"""This function will sum x and y into a variable z and print the variable z when the function exits"""</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a>    <span class="bu">print</span>(add(x, y))</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1" aria-label="code-block-6-11"></a>print_add(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre>
 </div>
 <p>This code hints at the idea of “function composition”, which is the
 process of combining two or more functions to create a new function.</p>
@@ -2238,35 +2421,35 @@ function definition.</p>
 <p>During function application (“execution”) arguments can be
 “positional”, meaning they are passed in a specific order, or “keyword”,
 meaning they are passed with a specific name.</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="kw">def</span> add(x, y):</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="co"># Positional arguments</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a><span class="co"># Keyword arguments only</span></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a>add(x<span class="op">=</span><span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1" aria-label="code-block-6-11"></a><span class="co"># Positional and keyword arguments</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1" aria-label="code-block-6-12"></a>add(<span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span></code></pre>
-</div>
-<p>Default values are optional and defined in a similar way to how
-keyword arguments are passed, as in</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="co"># The default value of y is 5</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a><span class="kw">def</span> add(x, y<span class="op">=</span><span class="dv">5</span>):</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>add(<span class="dv">3</span>) <span class="co"># returns 8</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a>add(x<span class="op">=</span><span class="dv">3</span>) <span class="co"># returns 8</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a>add(<span class="dv">3</span>, <span class="dv">4</span>) <span class="co"># returns 7</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a><span class="co"># Positional arguments</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a><span class="co"># Keyword arguments only</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a>add(x<span class="op">=</span><span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1" aria-label="code-block-7-9"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1" aria-label="code-block-7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1" aria-label="code-block-7-11"></a><span class="co"># Positional and keyword arguments</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1" aria-label="code-block-7-12"></a>add(<span class="dv">3</span>, y<span class="op">=</span><span class="dv">5</span>)</span></code></pre>
+</div>
+<p>Default values are optional and defined in a similar way to how
+keyword arguments are passed, as in</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="co"># The default value of y is 5</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="kw">def</span> add(x, y<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a>add(<span class="dv">3</span>) <span class="co"># returns 8</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a>add(x<span class="op">=</span><span class="dv">3</span>) <span class="co"># returns 8</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a>add(<span class="dv">3</span>, <span class="dv">4</span>) <span class="co"># returns 7</span></span></code></pre>
 </div>
 <p>Finally, we can refer to functions based on how many arguments they
 take. For example, a function that takes one argument is called a “unary
@@ -2310,15 +2493,15 @@ the <code>lambda</code> keyword in reference to the mathematical
 notation of lambda calculus<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Lambda functions are very useful when
 using higher-order functions, which are functions that take other
 functions as arguments or return functions as their output.</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="co"># A lambda function that adds two numbers</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a><span class="co"># Using the lambda function</span></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>result <span class="op">=</span> add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="co"># A lambda function that adds two numbers</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="co"># Using the lambda function</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a>result <span class="op">=</span> add(<span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
 </div>
 </section><section><h2 class="section-heading" id="functions-all-the-way-down">Functions All the Way Down<a class="anchor" aria-label="anchor" href="#functions-all-the-way-down"></a>
 </h2>
@@ -2331,25 +2514,25 @@ composition”. We cannot go too deep into higher-order functions in this
 lesson, but they are an important concept to understand as you continue
 to learn about functions and their applications in programming. For now,
 here are some examples of higher-order functions in Python:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="co"># A higher-order function that takes a function as an argument</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="kw">def</span> <span class="bu">apply</span>(func, x, y):</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a>    <span class="cf">return</span> func(x, y)</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a>result <span class="op">=</span> <span class="bu">apply</span>(<span class="kw">lambda</span> x, y: x <span class="op">+</span> y, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a>result <span class="op">=</span> <span class="bu">apply</span>(add, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="co"># A higher-order function that takes a function as an argument</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="kw">def</span> <span class="bu">apply</span>(func, x, y):</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>    <span class="cf">return</span> func(x, y)</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a>result <span class="op">=</span> <span class="bu">apply</span>(<span class="kw">lambda</span> x, y: x <span class="op">+</span> y, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1" aria-label="code-block-10-7"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1" aria-label="code-block-10-8"></a></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1" aria-label="code-block-10-9"></a>add <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">+</span> y</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1" aria-label="code-block-10-10"></a>result <span class="op">=</span> <span class="bu">apply</span>(add, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1" aria-label="code-block-10-11"></a><span class="bu">print</span>(result) <span class="co"># Output: 8</span></span></code></pre>
 </div>
-<p>In practice, higher-order functions like <code>map</code> and
-<code>filter</code> are commonly used in Python for applying a function
-to a list of values or filtering a list of values based on a condition,
-respectively.</p>
+<p>In practice, <a href="./reference#higher-order-functions">higher-order functions</a>
+like <code>map</code> and <code>filter</code> are commonly used in
+Python for applying a function to a list of values or filtering a list
+of values based on a condition, respectively.</p>
 <div id="functional-finale" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2372,30 +2555,32 @@ any variables?</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a>is_even <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a>square <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>numbers <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(square, <span class="bu">filter</span>(is_even, numbers)))</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a>is_even <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a>square <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a>numbers <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(square, <span class="bu">filter</span>(is_even, numbers)))</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1" aria-label="code-block-11-6"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
 </div>
 <p>Variables are not strictly necessary in this case, as we can directly
 pass the lambda functions to <code>map</code> and <code>filter</code>
 without assigning them to a variable.</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span>, <span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>))))</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a>squares <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span>, <span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>))))</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a><span class="bu">print</span>(squares) <span class="co"># Output: [4, 16, 36, 64, 100]</span></span></code></pre>
 </div>
 <blockquote>
 <p><em>“…variables are a logically unnecessary but practically very
 useful device.”</em></p>
 <p>–Haskell Curry, Combinatory Logic, 1968, p. 154</p>
 </blockquote>
+<p>See the <a href="./reference">reference</a> for more information on
+higher-order functions and list comprehensions.</p>
 </div>
 </div>
 </div>
@@ -2502,7 +2687,7 @@ fixed things. If you are successful, you will see
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2550,7 +2735,7 @@ correctly fixed things. If you are successful, you will see
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2620,7 +2805,7 @@ rolf plays the banjo</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2673,7 +2858,7 @@ successful, you will see <code>'Success!'</code> printed out.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2755,7 +2940,7 @@ successful, you will see <code>'Success!'</code> printed out.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
