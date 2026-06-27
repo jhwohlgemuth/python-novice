@@ -349,7 +349,7 @@
         
 <section id="aio-01_executing_python"><p>Content from <a href="01_executing_python.html">Executing Python Code</a></p>
 <hr>
-<p>Last updated on 2026-06-20 |
+<p>Last updated on 2026-06-27 |
 
         <a href="https://github.com/jhwohlgemuth/python-novice/edit/main/episodes/01_executing_python.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -461,7 +461,7 @@ character, you just need to press <kbd>Enter</kbd> /
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>After entering the REPL, execute the following command to exit:</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -591,8 +591,61 @@ following output to the console,</p>
 You underestimate my power!</code></pre>
 </div>
 <p>A blank template file called <code>first_script.py</code> is included
-in the data you downloaded for this lesson. Use <code>vim</code> or your
-favorite text editor to open the file, <code>first_script.py</code>.</p>
+in the data you downloaded for this lesson. Use your favorite text
+editor to open the file, <code>first_script.py</code>.</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  VS Code
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  Vim
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-3" type="button" role="tab" aria-controls="nav-tabpanel-1-3" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-3">
+  Neovim
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-4" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-4" type="button" role="tab" aria-controls="nav-tabpanel-1-4" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-4">
+  Manual
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">code</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">vim</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">nvim</span> first_script.py</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-4">
+<ul>
+<li>Right click file icon, select “Open With”, and select your favorite
+text editor.</li>
+</ul>
+</div>
+</div>
+</div>
 <p>Once you have opened this file, it’s time to fill it with some code.
 Entering code into a Python file works just like entering it into the
 interactive shell, just without the <code>&gt;&gt;&gt;</code>. And, just
@@ -601,35 +654,35 @@ statement or piece of code, just move on to the next line. A blank line
 in your file will cause no harm, as it just means you are not trying to
 execute code on that line. For testing purposes, let’s fill out
 <code>first_script.py</code> with the following code</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="co"># top of the file</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="co">'''</span></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a><span class="co">Showing off commenting out multiple lines.</span></span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a><span class="co">Sometimes comments of this nature are used</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a><span class="co">to provide a description of the file at</span></span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1" aria-label="code-block-11-6"></a><span class="co">the top of the file.</span></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1" aria-label="code-block-11-7"></a><span class="co">They can span multiple lines when enclosed</span></span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1" aria-label="code-block-11-8"></a><span class="co">by a pair of three single quotes.</span></span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1" aria-label="code-block-11-9"></a><span class="co">'''</span></span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1" aria-label="code-block-11-10"></a></span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1" aria-label="code-block-11-11"></a><span class="bu">print</span>(<span class="st">"Hello from your first script!"</span>)</span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1" aria-label="code-block-11-12"></a></span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1" aria-label="code-block-11-13"></a><span class="co"># Add some numbers</span></span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1" aria-label="code-block-11-14"></a>x <span class="op">=</span> <span class="fl">8.675</span></span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1" aria-label="code-block-11-15"></a>y <span class="op">=</span> <span class="fl">3.09</span></span>
-<span id="cb11-16"><a href="#cb11-16" tabindex="-1" aria-label="code-block-11-16"></a>z <span class="op">=</span> x <span class="op">+</span> y</span>
-<span id="cb11-17"><a href="#cb11-17" tabindex="-1" aria-label="code-block-11-17"></a></span>
-<span id="cb11-18"><a href="#cb11-18" tabindex="-1" aria-label="code-block-11-18"></a><span class="co"># Print some output</span></span>
-<span id="cb11-19"><a href="#cb11-19" tabindex="-1" aria-label="code-block-11-19"></a><span class="bu">print</span>(<span class="st">"Jenny has "</span>, z, <span class="st">" gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co"># top of the file</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="co">'''</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="co">Showing off commenting out multiple lines.</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a><span class="co">Sometimes comments of this nature are used</span></span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a><span class="co">to provide a description of the file at</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a><span class="co">the top of the file.</span></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="co">They can span multiple lines when enclosed</span></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a><span class="co">by a pair of three single quotes.</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a><span class="co">'''</span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1" aria-label="code-block-14-11"></a><span class="bu">print</span>(<span class="st">"Hello from your first script!"</span>)</span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1" aria-label="code-block-14-12"></a></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1" aria-label="code-block-14-13"></a><span class="co"># Add some numbers</span></span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1" aria-label="code-block-14-14"></a>x <span class="op">=</span> <span class="fl">8.675</span></span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1" aria-label="code-block-14-15"></a>y <span class="op">=</span> <span class="fl">3.09</span></span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1" aria-label="code-block-14-16"></a>z <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1" aria-label="code-block-14-17"></a></span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1" aria-label="code-block-14-18"></a><span class="co"># Print some output</span></span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1" aria-label="code-block-14-19"></a><span class="bu">print</span>(<span class="st">"Jenny has "</span>, z, <span class="st">" gallons of water in her pool."</span>)</span></code></pre>
 </div>
 <p>After you have filled in your file with code (and saved), you can run
 it by executing the following in your terminal</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">python</span> first_script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">python</span> first_script.py</span></code></pre>
 </div>
 <p>You should then see the following output displayed in your
 terminal</p>
@@ -657,17 +710,17 @@ Jenny has  11.765  gallons of water in her pool.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>There are extra spaces in the output because we used commas to
 separate the different items in our <code>print</code> statement. When
 you use commas in a <code>print</code> statement, Python automatically
 adds a space between each item.</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co"># Print without extra spaces</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="bu">print</span>(<span class="st">"Jenny has"</span>, z, <span class="st">"gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="co"># Print without extra spaces</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="bu">print</span>(<span class="st">"Jenny has"</span>, z, <span class="st">"gallons of water in her pool."</span>)</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="alternative-solution-1">Alternative Solution<a class="anchor" aria-label="anchor" href="#alternative-solution-1"></a>
@@ -676,11 +729,11 @@ adds a space between each item.</p>
 output. There are many reasons why f-strings are generally preferred
 over using commas in <code>print</code> statements including improved
 control and readability.</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="co"># Print using an f-string</span></span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="bu">print</span>(<span class="ss">f"Jenny has </span><span class="sc">{</span>z<span class="sc">}</span><span class="ss"> gallons of water in her pool."</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="co"># Print using an f-string</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="bu">print</span>(<span class="ss">f"Jenny has </span><span class="sc">{</span>z<span class="sc">}</span><span class="ss"> gallons of water in her pool."</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -702,14 +755,14 @@ at the start of a brand new line or following pieces of code. However,
 the <code>#</code> symbol enclosed by a pair of <code>"</code> or
 <code>'</code> is just a hash character and has no effect. For example,
 consider the following code,</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># this is a comment</span></span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">"Comments are hidden"</span><span class="kw">)</span> <span class="co"># this is also a comment</span></span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a><span class="st">'Comments are hidden'</span></span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">" # this is not a comment because enclosed in quotes"</span><span class="kw">)</span></span>
-<span id="cb16-5"><a href="#cb16-5" tabindex="-1" aria-label="code-block-16-5"></a> <span class="co"># this is not a comment because enclosed in quotes</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># this is a comment</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">"Comments are hidden"</span><span class="kw">)</span> <span class="co"># this is also a comment</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a><span class="st">'Comments are hidden'</span></span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a><span class="op">&gt;&gt;&gt;</span> print<span class="kw">(</span><span class="st">" # this is not a comment because enclosed in quotes"</span><span class="kw">)</span></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a> <span class="co"># this is not a comment because enclosed in quotes</span></span></code></pre>
 </div>
 <p>Comments are used heavily throughout this lesson and, other than the
 above example, you do not have to type in the comments yourself while
@@ -759,7 +812,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02_types_and_operators"><p>Content from <a href="02_types_and_operators.html">Types and Operators</a></p>
 <hr>
-<p>Last updated on 2026-06-21 |
+<p>Last updated on 2026-06-27 |
 
         <a href="https://github.com/jhwohlgemuth/python-novice/edit/main/episodes/02_types_and_operators.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1271,13 +1324,13 @@ we have</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">0:10</span><span class="pp">]</span></span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">0:10</span><span class="pp">]</span></span>
 <span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="st">'abcdefghij'</span></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">0:5</span><span class="pp">]</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">0:5</span><span class="pp">]</span></span>
 <span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a><span class="st">'abcde'</span></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="op">&gt;&gt;&gt;</span> z<span class="pp">[</span><span class="ss">1:5</span><span class="pp">]</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="op">&gt;&gt;&gt;</span> alphabet<span class="pp">[</span><span class="ss">1:5</span><span class="pp">]</span></span>
 <span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a><span class="st">'bcde'</span></span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a><span class="op">&gt;&gt;&gt;</span> z[1 <span class="bu">:</span> <span class="er">(</span><span class="ex">4+1</span><span class="kw">)</span><span class="ex">]</span>  <span class="co"># slices indices 1-4 (same as above, but with math)</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a><span class="op">&gt;&gt;&gt;</span> alphabet[1 <span class="bu">:</span> <span class="er">(</span><span class="ex">4+1</span><span class="kw">)</span><span class="ex">]</span>  <span class="co"># slices indices 1-4 (same as above, but with math)</span></span>
 <span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a><span class="st">'bcde'</span></span></code></pre>
 </div>
 <p>Remember that when performing math inside of <code>[ ]</code> on
@@ -1553,7 +1606,7 @@ happens.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1588,7 +1641,7 @@ a look at the code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1686,7 +1739,7 @@ a look at the code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1794,7 +1847,7 @@ the <code>scripts</code> directory and take a look at the code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
   <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1847,7 +1900,7 @@ the <code>scripts</code> directory and take a look at the code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
   <h3 class="accordion-header" id="headingSpoiler5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1921,7 +1974,7 @@ the <code>scripts</code> directory and take a look at the code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler6" aria-expanded="false" aria-controls="collapseSpoiler6">
   <h3 class="accordion-header" id="headingSpoiler6">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1967,7 +2020,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04_functions_functions_functions"><p>Content from <a href="04_functions_functions_functions.html">Functions, Functions, Functions</a></p>
 <hr>
-<p>Last updated on 2026-06-21 |
+<p>Last updated on 2026-06-27 |
 
         <a href="https://github.com/jhwohlgemuth/python-novice/edit/main/episodes/04_functions_functions_functions.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2031,7 +2084,7 @@ pre-defined functions in this lesson, mainly <code>print</code> and
 <code>len</code>, but you can also create your own functions, which are
 called “user-defined functions”.</p>
 <p>We can represent the idea of a function mathematically<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> as</p>
-<p>$ f(x) = y $</p>
+<p><span class="math inline">\(f(x) = y\)</span></p>
 <p>Where <code>f</code> is the name of the function, <code>x</code> is
 the argument, and <code>y</code> is the return value.</p>
 <p>The same idea can be represented in Python as</p>
@@ -2076,7 +2129,7 @@ happens.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2106,7 +2159,7 @@ happens.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2151,7 +2204,7 @@ result?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2237,7 +2290,7 @@ arguments?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>“N-ary” or “variadic” function, where <code>N</code> is a variable
 that can take on any value.</p>
@@ -2317,7 +2370,7 @@ any variables?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2387,7 +2440,7 @@ typesetter.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div></section><section id="aio-05_challenges"><p>Content from <a href="05_challenges.html">Bonus Challenges</a></p>
 <hr>
-<p>Last updated on 2026-06-21 |
+<p>Last updated on 2026-06-27 |
 
         <a href="https://github.com/jhwohlgemuth/python-novice/edit/main/episodes/05_challenges.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2427,21 +2480,29 @@ typesetter.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </tr>
 </tbody>
 </table>
-<section><h2 class="section-heading" id="slicing-the-cake">Slicing the Cake<a class="anchor" aria-label="anchor" href="#slicing-the-cake"></a>
-</h2>
-<hr class="half-width">
+<div id="slicing-the-cake" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="slicing-the-cake" class="callout-inner">
+<h3 class="callout-title">Slicing the Cake</h3>
+<div class="callout-content">
 <p>Who doesn’t love slicing some cake? The objective of this challenge
 is to match two lists (test_cake and fake_cake) by slicing real_cake.
 Your mission is to edit the line labeled as “TO-DO” to get the script to
 work properly. After editing the script, run it to see if you correctly
 fixed things. If you are successful, you will see
 <code>'Success!'</code> printed out.</p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2465,9 +2526,14 @@ fixed things. If you are successful, you will see
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="calculating-the-box">Calculating the Box<a class="anchor" aria-label="anchor" href="#calculating-the-box"></a>
-</h2>
-<hr class="half-width">
+<div id="calculating-the-box" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="calculating-the-box" class="callout-inner">
+<h3 class="callout-title">Calculating the Box</h3>
+<div class="callout-content">
 <p>Who doesn’t love math and boxes? The objective of this challenge is
 to fill in the missing information of the get_size function to calculate
 the area and volume of a box and then return the results in the form of
@@ -2476,12 +2542,15 @@ function and the return line of the function, which are both marked by
 “TO-DO” comments. After editing the script, run it to see if you
 correctly fixed things. If you are successful, you will see
 <code>'Success!'</code> printed out.</p>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2514,9 +2583,14 @@ correctly fixed things. If you are successful, you will see
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="playing-the-banjo">Playing the Banjo<a class="anchor" aria-label="anchor" href="#playing-the-banjo"></a>
-</h2>
-<hr class="half-width">
+<div id="playing-the-banjo" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="playing-the-banjo" class="callout-inner">
+<h3 class="callout-title">Playing the Banjo</h3>
+<div class="callout-content">
 <p>Who doesn’t love the banjo? The objective of this challenge is to
 fill in the missing information of the <code>playing_banjo</code>
 function to figure out if someone knows how to play the banjo or not.
@@ -2538,12 +2612,15 @@ brian does not play the banjo
 Ryan plays the banjo
 rolf plays the banjo</code></pre>
 </div>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2572,9 +2649,14 @@ rolf plays the banjo</code></pre>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="counting-the-sheep">Counting the Sheep<a class="anchor" aria-label="anchor" href="#counting-the-sheep"></a>
-</h2>
-<hr class="half-width">
+<div id="counting-the-sheep" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="counting-the-sheep" class="callout-inner">
+<h3 class="callout-title">Counting the Sheep</h3>
+<div class="callout-content">
 <p>Who doesn’t love sheep? The objective of this challenge is to fill in
 the missing information of the <code>count_sheeps</code> function to
 count the number of “True” entries in a list. Each “True” entry in the
@@ -2583,12 +2665,15 @@ edit one line of the body of the function, marked by the “TO-DO”
 comment. After editing the script, run it to see if you correctly fixed
 things (the function should be able to detect 17 sheep). If you are
 successful, you will see <code>'Success!'</code> printed out.</p>
-<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
-  <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2645,9 +2730,14 @@ successful, you will see <code>'Success!'</code> printed out.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="finding-the-needle">Finding the Needle<a class="anchor" aria-label="anchor" href="#finding-the-needle"></a>
-</h2>
-<hr class="half-width">
+<div id="finding-the-needle" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="finding-the-needle" class="callout-inner">
+<h3 class="callout-title">Finding the Needle</h3>
+<div class="callout-content">
 <p>Who doesn’t love needles in haystacks? The objective of this
 challenge is to fill in the missing information of the find_needle
 function so that it returns the position of “needle” in a given list.
@@ -2657,12 +2747,15 @@ you will need to add more than one line in the body of the loop even
 though it’s only marked by one “TO-DO” comment. After editing the
 script, run it to see if you correctly fixed things. If you are
 successful, you will see <code>'Success!'</code> printed out.</p>
-<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
-  <h3 class="accordion-header" id="headingSpoiler5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2717,12 +2810,7 @@ successful, you will see <code>'Success!'</code> printed out.</p>
 </div>
 </div>
 </div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section>
+</div></section>
 </div>
     </main>
 </div>
@@ -2771,9 +2859,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://jhwohlgemuth.github.io/python-novice/aio.html",
   "identifier": "https://jhwohlgemuth.github.io/python-novice/aio.html",
-  "dateCreated": "2026-06-21",
-  "dateModified": "2026-06-25",
-  "datePublished": "2026-06-25"
+  "dateCreated": "2026-06-27",
+  "dateModified": "2026-06-27",
+  "datePublished": "2026-06-27"
 }
 
   </script><script>
