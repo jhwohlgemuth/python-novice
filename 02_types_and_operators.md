@@ -373,13 +373,13 @@ Note that when using `:`, the left side is *inclusive* while the right side is *
 Therefore, for a desired range, this results in a syntax of `[desired start index : desired end index + 1 ]`. For example, using our `alphabet` string variable of length 26, we have
 
 ```bash
->>> z[0:10]
+>>> alphabet[0:10]
 'abcdefghij'
->>> z[0:5]
+>>> alphabet[0:5]
 'abcde'
->>> z[1:5]
+>>> alphabet[1:5]
 'bcde'
->>> z[1 : (4+1)]  # slices indices 1-4 (same as above, but with math)
+>>> alphabet[1 : (4+1)]  # slices indices 1-4 (same as above, but with math)
 'bcde'
 ```
 
